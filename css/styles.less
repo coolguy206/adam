@@ -1,25 +1,291 @@
-@raleway: 'Raleway';
-@montserrat: 'Montserrat';
+@font-headings: 'Raleway';
+@font-paragraphs: 'Montserrat';
+@btn-width: 12rem;
+@orange: orange;
+@red: red;
+@blue: rgb(98, 98, 163);
 
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
 
 h1, h2, h3, h4, h5, h6, button, a {
-  font-family: @raleway;
+  font-family: @font-headings;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+button {
+  width: @btn-width;
+  border: none;
+  background-color: unset;
+  padding: .5rem;
 }
 
 p {
-  font-family: @montserrat;
+  font-family: @font-paragraphs;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  
+  margin-top: .5rem;
+  margin-right: .25rem;
+  margin-left: .75rem;
+  margin-bottom: 1rem;
+}
+
+#website_name {
+  margin: 0;
+  padding: 0;
+  font-family: @font-headings;
+  text-transform: uppercase;
+
+  font-size: 2rem;
+  line-height: 1.6rem;
+  display: inline-block;
+  width: 40%;
+  text-align: left;
 }
 
 nav {
-  display: block;
+  display: inline-flex;
+  justify-content: space-between;
+
+  width: 60%;
+  font-size: .75rem;
 }
 
 nav a {
   text-decoration: none;
+  color: black;
 }
 
-nav a:first-child {
-  border: 1px dotted red;
-  display: inline-block;
-  width: 40%;
+#banner {
+  display: flex;
+}
+
+.banner_img {
+  width: 60%;
+}
+
+.banner_text {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.banner_text h3 {
+  color: @orange;
+}
+
+.banner_text button {
+  color: @orange;
+  background-color: black;
+  border: 1px solid @orange;
+}
+
+#improv_section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#improv_section h2 {
+  width: 100%;
+}
+
+#improv_sec_classes, #improv_sec_shows {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.improv_sec_imgs {
+  width: 100%;
+}
+
+.improv_sec_btns {
+  // width: 70%;
+  // width: @btn-width;
+  // border: none;
+  // padding: .5rem;
+}
+
+#improv_sec_classes_btn {
+  background: @orange;
+}
+
+#improv_sec_shows_btn {
+  background: @red;
+  color: white;
+}
+
+.improv_sec_links {
+  text-decoration: underline;
+  color: black;
+  font-size: .75rem;
+  margin-top: .5rem;
+}
+
+#improv_sec_shows_link {
+  color: @red;
+}
+
+#services_section {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: @blue;
+  color: white;
+}
+
+#services_section h2 {
+  width: 100%;
+}
+
+.services_sections {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  position: relative;
+}
+
+.services_sections h3, h4 {
+  color: @orange;
+}
+
+.services_sections > :nth-last-child(2) {
+  margin-bottom: 3rem;
+}
+
+// mobile view: disable margin-bottom
+#services_sec_classes h3 {
+  margin-bottom: 2.55rem;
+}
+
+.services_sec_btns {
+  // width: 70%;
+  // width: @btn-width;
+  // background-color: unset;
+  border: 1px solid @orange;
+  color: @orange;
+  padding: .5rem;
+
+  position: absolute;
+  bottom: 0;
+}
+
+// to center listed numbers
+ol {
+  list-style-position: inside;
+}
+
+.gallery_sec_subheadings {
+  margin-left: 20%;
+  text-align: left;
+}
+
+.more_media_links {
+  display: block;
+  margin-right: 15%;
+  text-align: right;
+  color: black;
+  font-size: .75rem;
+  margin-top: 1.2rem;
+}
+
+.videos_container, .photos_container {
+  display: flex;
+}
+
+.media_thumbnails {
+  width: 20%;
+}
+
+#about_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: @blue;
+  color: white;
+}
+
+#about_section h2 {
+  width: 100%;
+}
+
+.about_sections {
+  width: 30%;
+}
+
+.about_sections h3 {
+  color: @orange;
+}
+
+.about_sec_imgs {
+  width: 100%;
+}
+
+#contact_sec_info span {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.form_grp {
+  width: 50%;
+}
+
+#form_grp_txtarea {
+  width: 100%;
+}
+
+#form_grp_btn {
+  background-color: @red;
+  margin-left: auto;
+}
+
+label {
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+#footer_nav, #footer_socialmedia {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 1rem auto;
+  padding: 0;
+
+  width: 80%;
+}
+
+#footer_contact {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#footer_contact span {
+  display: block;
 }

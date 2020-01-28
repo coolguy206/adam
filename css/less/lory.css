@@ -1,0 +1,1 @@
+.slider{position:relative;margin-top:100px}.frame{position:relative;font-size:0;line-height:0;overflow:hidden;white-space:nowrap}.slides{display:inline-block;width:100%}.slides li{position:relative;display:inline-block;width:100%}.prev,.next{position:absolute;top:55%;display:block;cursor:pointer}.next{right:0}.prev{left:0}.next svg,.prev svg{width:50px}

@@ -105,34 +105,41 @@ nav {
   justify-content: space-around;
 }
 
-#banner {
+.banner {
   display: flex;
-  margin-top: 100px;
+  position: relative;
+  white-space: normal;
+  height: 650px;
 }
 
 .banner_img {
   width: 60%;
   margin: 0;
+  object-fit: cover;
 }
 
 .banner_text {
   background-color: black;
-  color: white;
-  text-align: center;
+  margin: 0;
   width: 40%;
   padding-top: 12%;
 }
 
-.banner_text h3 {
+.banner_title {
   color: #ffcf51;
   font-family: 'Raleway';
+  font-size: 48px;
+  width: 350px;
+  margin: 0 auto 50px;
+  line-height: initial;
 }
 
-.banner_text p {
+.banner_desc {
   color: white;
   font-size: 21px;
   width: 350px;
   margin: 0 auto 50px;
+  line-height: initial;
 }
 
 .banner_text .link_btns {
@@ -156,10 +163,18 @@ nav {
 }
 
 #improv_sec_classes,#improv_sec_shows {
-  width: calc(50% - 10px);
+  width: calc(50% - 5px);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#improv_sec_classes {
+  margin-left: 0;
+}
+
+#improv_sec_shows {
+  margin-right: 0;
 }
 
 .improv_sec_imgs {
@@ -195,11 +210,19 @@ nav {
 }
 
 #services_section * {
-  width: calc(50% - 10px);
+  width: calc(50% - 5px);
   text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#services_section img {
+  margin-bottom: 30px;
 }
 
 #services_section div * {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
 
@@ -301,7 +324,7 @@ ol {
 
 .more_media_links {
   display: block;
-  margin-right: 15%;
+  margin-right: 10%;
   text-align: right;
   color: black;
   font-family: 'Raleway';
@@ -313,6 +336,13 @@ ol {
   display: flex;
   list-style-type: none;
   margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.gallery_slider li {
+  width: calc(20% - 5px);
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .media_thumbnails {
@@ -334,7 +364,8 @@ ol {
 
 .about_sections {
   width: 30%;
-  margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .about_sections h3 {
@@ -343,7 +374,6 @@ ol {
 }
 
 .about_sections p {
-  padding: 0 5px;
   margin-bottom: 30px;
 }
 
@@ -371,6 +401,7 @@ form {
 
 .form_grp {
   width: calc(50% - 10px);
+  margin: 0;
   margin-bottom: 30px;
 }
 

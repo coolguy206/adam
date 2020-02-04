@@ -76,33 +76,55 @@ a {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
   position: fixed;
   top: 0;
+  height: 100px;
   width: 100%;
   max-width: 1390px;
-  height: 100px;
+  background-color: black;
   z-index: 100;
 }
 
-#adam_dow {
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 0;
+}
+
+#brand {
   width: calc(50% - 5px);
   margin: 0;
   padding: 0;
   padding-left: 3%;
   font-family: 'Raleway';
-  text-transform: uppercase;
   font-size: 80px;
+  text-align: left;
+  white-space: nowrap;
 }
 
-nav {
+#navlinks_container {
   width: calc(50% - 5px);
-  padding-top: 12px;
+  margin: 0;
+  padding-top: 13px;
   font-size: 21px;
   display: inline-flex;
+  text-align: center;
   justify-content: space-around;
+}
+
+#hamburger_close {
+  display: none;
+}
+
+nav .icon {
+  display: none;
 }
 
 .banner {
@@ -455,4 +477,43 @@ footer {
 i {
   font-size: 32px;
   color: #adb5bd;
+}
+
+@media only screen and (max-width:1000px) {
+  nav a {
+    display: none;
+    color: black;
+  }
+
+  #brand {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: unset;
+    color: white;
+  }
+
+  #navlinks_container {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    text-align: center;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    padding: 0;
+    display: block;
+  }
+
+  nav a.icon {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding-top: 8px;
+  }
+
+  .icon i {
+    font-size: 5em;
+  }
 }

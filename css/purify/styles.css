@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
   font-family: 'Montserrat';
-  margin: 0 auto;
-  padding: 0;
 }
 
 body,html {
+  margin: 0 auto;
+  padding: 0;
   font-size: 100%;
 }
 
 .wrapper {
-  max-width: 1390px;
+  max-width: 90em;
   margin: 0 auto;
 }
 
@@ -22,20 +22,20 @@ h2,h3,h4,h5,h6,button,a {
 }
 
 h2 {
-  font-size: 64px;
   margin-bottom: 40px;
+  font-size: 3em;
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 2.25em;
 }
 
 h4 {
-  font-size: 32px;
+  font-size: 1.5em;
 }
 
 p,input,select,textarea {
-  font-size: 21px;
+  font-size: 1em;
 }
 
 p {
@@ -55,9 +55,10 @@ a {
 .link_btns {
   display: block;
   margin: 0 auto;
-  width: 350px;
-  font-size: 32px;
-  padding: 20px 0;
+  width: 100%;
+  padding: 27px 0;
+  font-size: 1.5em;
+  height: 85px;
 }
 
 .border_btns {
@@ -72,15 +73,15 @@ a {
 
 .sections .anchors {
   position: absolute;
-  top: -100px;
+  top: -6.25em;
 }
 
 header {
   position: fixed;
   top: 0;
-  height: 100px;
+  height: 6.25em;
   width: 100%;
-  max-width: 1390px;
+  max-width: 90em;
   background-color: black;
   z-index: 100;
 }
@@ -89,6 +90,7 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding-top: .5em;
 }
 
 nav a {
@@ -104,19 +106,19 @@ nav a {
   padding: 0;
   padding-left: 3%;
   font-family: 'Raleway';
-  font-size: 80px;
   text-align: left;
   white-space: nowrap;
+  font-size: 3.75em;
 }
 
 #navlinks_container {
   width: calc(50% - 5px);
   margin: 0;
-  padding-top: 13px;
-  font-size: 21px;
   display: inline-flex;
   text-align: center;
   justify-content: space-around;
+  padding-top: .625em;
+  font-size: 1em;
 }
 
 #hamburger_close {
@@ -144,29 +146,30 @@ nav .icon {
   background-color: black;
   margin: 0;
   width: 40%;
-  padding-top: 12%;
+  padding-top: 8em;
+  padding: 8em 3em 0;
 }
 
 .banner_title {
   color: #ffcf51;
   font-family: 'Raleway';
-  font-size: 48px;
-  width: 350px;
   margin: 0 auto 50px;
   line-height: initial;
+  font-size: 2.25em;
+  text-transform: uppercase;
 }
 
 .banner_desc {
   color: white;
-  font-size: 21px;
-  width: 350px;
   margin: 0 auto 50px;
   line-height: initial;
+  font-size: 1em;
 }
 
 .banner_text .link_btns {
   color: #ffcf51;
   border: 1px solid #ffcf51;
+  font-size: 1.5em;
 }
 
 #improv_section {
@@ -180,12 +183,20 @@ nav .icon {
 }
 
 #improv_section p {
-  width: 350px;
   text-align: center;
 }
 
+#improv_section * * {
+  width: calc(50% - .5em);
+  margin: initial auto;
+}
+
+#improv_section * img {
+  width: 100%;
+}
+
 #improv_sec_classes,#improv_sec_shows {
-  width: calc(50% - 5px);
+  width: calc(50% - .5em);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,10 +208,6 @@ nav .icon {
 
 #improv_sec_shows {
   margin-right: 0;
-}
-
-.improv_sec_imgs {
-  width: 100%;
 }
 
 #improv_sec_classes_btn {
@@ -233,6 +240,7 @@ nav .icon {
 
 #services_section * {
   width: calc(50% - 5px);
+  width: calc(50% - .5em);
   text-align: center;
   margin-left: 0;
   margin-right: 0;
@@ -263,75 +271,75 @@ ol {
   text-transform: uppercase;
   margin: 0 auto;
   width: 100%;
+  font-size: 1em;
 }
 
 #services_section h2 {
-  order: 1;
   width: 100%;
 }
 
 #workshop_title {
-  order: 2;
+  order: 1;
 }
 
 #classes_title {
-  order: 3;
+  order: 2;
 }
 
 #workshop_img {
-  order: 4;
+  order: 3;
 }
 
 #classes_img {
-  order: 5;
+  order: 4;
 }
 
 #workshop_desc {
-  order: 6;
+  order: 5;
 }
 
 #classes_desc {
-  order: 7;
+  order: 6;
 }
 
 #workshop_btn {
-  order: 8;
+  order: 7;
 }
 
 #classes_btn {
-  order: 9;
+  order: 8;
 }
 
 #production_title {
-  order: 10;
+  order: 9;
 }
 
 #acting_title {
-  order: 11;
+  order: 10;
 }
 
 #production_img {
-  order: 12;
+  order: 11;
 }
 
 #acting_img {
-  order: 13;
+  order: 12;
 }
 
 #production_desc {
-  order: 14;
+  order: 13;
 }
 
 #acting_desc {
-  order: 15;
+  order: 14;
 }
 
 #production_btn {
-  order: 16;
+  order: 15;
 }
 
 #acting_btn {
-  order: 17;
+  order: 16;
 }
 
 #gallery_section ul {
@@ -339,19 +347,19 @@ ol {
 }
 
 .gallery_sec_subheadings {
-  margin-left: 15%;
+  margin-left: 20%;
   margin-bottom: 30px;
   text-align: left;
 }
 
 .more_media_links {
   display: block;
-  margin-right: 10%;
+  margin-right: 15%;
   text-align: right;
   color: black;
   font-family: 'Raleway';
-  font-size: 32px;
   text-decoration: underline;
+  font-size: 1.5em;
 }
 
 .gallery_slider {
@@ -362,7 +370,7 @@ ol {
 }
 
 .gallery_slider li {
-  width: calc(20% - 5px);
+  width: calc(20% - .75em);
   margin-left: 0;
   margin-right: 0;
 }
@@ -422,9 +430,13 @@ form {
 }
 
 .form_grp {
-  width: calc(50% - 10px);
+  width: calc(50% - .5em);
   margin: 0;
   margin-bottom: 30px;
+}
+
+.form_grp:last-child {
+  align-self: flex-end;
 }
 
 .form_grp_txtarea {
@@ -439,6 +451,7 @@ label {
   text-transform: uppercase;
   width: 100%;
   margin-bottom: 10px;
+  font-size: 1.5em;
 }
 
 input,select,textarea {
@@ -454,8 +467,7 @@ textarea {
 #submit_btn {
   border: none;
   background-color: #e8343a;
-  margin: unset;
-  margin-left: auto;
+  width: calc(50% - .5em);
 }
 
 footer {
@@ -470,8 +482,13 @@ footer {
   width: 45%;
 }
 
+#footer_nav {
+  font-size: 1em;
+}
+
 #footer_socialmedia {
   width: 30%;
+  font-size: 2em;
 }
 
 i {
@@ -483,15 +500,18 @@ i {
   nav a {
     display: none;
     color: black;
+    font-size: 2.25em;
   }
 
   #brand {
     display: block;
-    margin: 0 auto;
     padding: 0;
     text-align: center;
     width: unset;
     color: white;
+    text-align: left;
+    width: 80%;
+    font-size: 2.5em;
   }
 
   #navlinks_container {
@@ -509,11 +529,121 @@ i {
   nav a.icon {
     display: inline-block;
     text-align: center;
-    margin: 0;
-    padding-top: 8px;
+    padding-top: .2em;
+    width: 20%;
   }
 
   .icon i {
-    font-size: 5em;
+    font-size: 1.25em;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner_img {
+    width: 100%;
+  }
+
+  .banner_text {
+    width: 100%;
+  }
+
+  #improv_section {
+    flex-direction: column;
+  }
+
+  #improv_section * {
+    width: 100%;
+  }
+
+  #improv_section * * {
+    width: calc(100% - 1.5em);
+    margin: 0 auto;
+  }
+
+  #improv_section * img {
+    width: 100%;
+  }
+
+  #services_section {
+    flex-direction: column;
+  }
+
+  #services_section * {
+    order: unset;
+    width: 100%;
+  }
+
+  #services_section * * {
+    width: calc(100% - 1.5em);
+    margin: 0 auto;
+  }
+
+  #services_section * img {
+    width: 100%;
+  }
+
+  .gallery_sec_subheadings,  .more_media_links {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gallery_slider {
+    display: block;
+  }
+
+  .gallery_slider li {
+    width: 100%;
+  }
+
+  .gallery_slider li:not(:first-child) {
+    display: none;
+  }
+
+  #about_section {
+    flex-direction: column;
+    flex-wrap: unset;
+    margin: 0 auto;
+  }
+
+  #about_section * {
+    width: 100%;
+  }
+
+  #about_section * * {
+    width: calc(100% - 1.5em);
+    margin: 0 auto;
+  }
+
+  #about_section img {
+    width: 100%;
+  }
+
+  form {
+    flex-direction: column;
+    width: 100%;
+    width: calc(100% - 1.5em);
+  }
+
+  .form_grp {
+    width: 100%;
+  }
+
+  .form_grp * {
+    width: 100%;
+  }
+
+  #submit_btn {
+    width: 100%;
+  }
+
+  footer {
+    width: calc(100% - 1.5em);
+    margin: 0 auto;
+  }
+
+  #footer_nav,  #footer_socialmedia {
+    width: 100%;
   }
 }

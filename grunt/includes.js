@@ -7,7 +7,7 @@ module.exports = {
   dist: {
     files: [{
       cwd: 'html/',
-      src: ['*.html'],
+      src: ['index.html'],
       dest: '',
     }, ],
   },

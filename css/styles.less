@@ -1,11 +1,11 @@
 @font-headings: 'Raleway';
 @font-paragraphs: 'Montserrat';
-// @pg-max-width: 1440px;
-@pg-max-width: 90em;
+@pg-max-width: 1440px;
 @btn-width: 100%; // 421px; // 350px;
 @btn-height: 85px;
 // @nav-height: 100px;
-@nav-height: 6.25em;
+// @nav-height: 6.25em;
+@nav-height: 8.1em;
 @mobile-side-paddings: calc(100% - 1.5em);
 @section-vert-gap: 80px;
 @subcontent-vert-gap: 30px;
@@ -26,6 +26,9 @@ body, html {
   padding: 0;
   font-size: 100%;
   // line-height: 150%;
+
+  background-color: white;
+  color: black;
 }
 
 .wrapper {
@@ -42,7 +45,8 @@ h2, h3, h4, h5, h6, button, a {
 
 h2 {
   // font-size: 64px;
-  margin-bottom: @subcontent-vert-gap + 10px;
+  // margin-bottom: @subcontent-vert-gap + 10px;
+  margin: 0 auto;
 
   font-size: 3em;
 }
@@ -51,6 +55,7 @@ h3 {
   // font-size: 48px;
 
   font-size: 2.25em;
+  margin-bottom: 24px;
 }
 
 h4 {
@@ -75,7 +80,8 @@ p {
 }
 
 img {
-  margin-bottom: @subcontent-vert-gap;
+  // margin-bottom: @subcontent-vert-gap;
+  margin-bottom: 18px;;
 }
 
 a {
@@ -90,7 +96,7 @@ a {
   // font-size: 32px;
   // padding: 20px 0;
 
-  padding: 27px 0;
+  padding: 28px 0;
   font-size: 1.5em;
   height: @btn-height;
 }
@@ -103,7 +109,8 @@ a {
 .sections {
   position: relative;
 
-  margin-bottom: @section-vert-gap;
+  // margin-bottom: @section-vert-gap;
+  margin-bottom: 88px;
 }
 .sections .anchors {
   position: absolute;
@@ -112,13 +119,18 @@ a {
 
 // #region header
 header {
-  position: fixed;
-  top: 0;
+  // position: relative;
   height: @nav-height;
   width: 100%;
   max-width: @pg-max-width;
-  background-color: black;
+  background-color: white;
   z-index: 100;
+}
+
+.header_sticky {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top: 0;
 }
 
 nav {
@@ -127,12 +139,13 @@ nav {
   height: 100%;
 
   padding-top: .5em;
+  padding-top: .45em;
 }
 
 nav a {
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  // color: white;
   padding: 0;
 }
 
@@ -140,7 +153,8 @@ nav a {
   width: calc(50% - 5px);
   margin: 0;
   padding: 0;
-  padding-left: 3%;
+  // padding-left: 3%;
+  padding-left: 2.8%;
   font-family: @font-headings;
   // font-size: 80px;
   text-align: left;
@@ -179,25 +193,30 @@ nav .icon {
   position: relative;
   white-space: normal;
 
-  height: 650px;
+  // height: 650px;
+  height: 735px;
 
   // border: 2px dotted red;
 }
 
 .banner_img {
-  width: 60%;
+  // width: 60%;
+  width: 59.25%;
   margin: 0;
   object-fit: cover;
+
 }
 
 .banner_text {
   background-color: black;
   margin: 0;
-  width: 40%;
+  // width: 40%;
+  width: 40.75%;
 
   // padding-top: 12%;
   padding-top: 8em;
   padding: 8em 3em 0;
+  padding: 10.7em 7.7% 0 3.9%;
 }
 
 .banner_title {
@@ -207,6 +226,7 @@ nav .icon {
 
   // width: @btn-width;
   margin: 0 auto 50px;
+  margin: 0 auto 15px;
   line-height: initial;
 
   font-size: 2.25em;
@@ -219,6 +239,7 @@ nav .icon {
 
   // width: @btn-width;
   margin: 0 auto 50px;
+  margin: 0 auto 30px;
 
   line-height: initial;
 
@@ -230,6 +251,7 @@ nav .icon {
   border: 1px solid @orange;
 
   font-size: 1.5em;
+  padding-top: 30px;
 }
 // #endregion
 
@@ -238,6 +260,8 @@ nav .icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  margin-bottom: 128px;
 }
 
 #improv_section h2 {
@@ -247,10 +271,12 @@ nav .icon {
 #improv_section p {
   // width: @btn-width;
   text-align: center;
+  margin-bottom: 6px;
 }
 
 #improv_section * * {
-  width: calc(50% - .5em);
+  // width: calc(50% - .5em);
+  width: 60%;
 
   margin: initial auto;
 }
@@ -282,17 +308,21 @@ nav .icon {
 
 #improv_sec_classes_btn {
   background: @orange;
+
+  width: 58.5%;
 }
 
 #improv_sec_shows_btn {
   background: @red;
   color: white;
+
+  width: 58.5%;
 }
 
 .improv_sec_links {
   text-decoration: underline;
   color: black;
-  margin-top: 10px;
+  // margin-top: 10px;
 }
 
 #improv_sec_shows_link {
@@ -308,11 +338,12 @@ nav .icon {
 
   background-color: @lightblue;
   color: white;
-  padding-top: 15px;
+  // padding-top: 15px;
+  padding-top: 58px;
 }
 
 #services_section * {
-  width: calc(50% - 5px);
+  // width: calc(50% - 5px);
   width: calc(50% - .5em);
   text-align: center;
   margin-left: 0;
@@ -320,7 +351,9 @@ nav .icon {
 }
  #services_section img {
   //  margin: 0;
-   margin-bottom: @subcontent-vert-gap;
+  //  margin-bottom: @subcontent-vert-gap;
+
+  border: 1px red dotted;
  }
 
 #services_section div * {
@@ -331,6 +364,10 @@ nav .icon {
 
 #services_section h3, h4 {
   color: @orange;
+}
+
+#services_section h3 {
+  margin-top: 32px;
 }
 
 ol {

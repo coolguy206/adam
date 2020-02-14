@@ -7,10 +7,12 @@ body,html {
   margin: 0 auto;
   padding: 0;
   font-size: 100%;
+  background-color: white;
+  color: black;
 }
 
 .wrapper {
-  max-width: 90em;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -22,12 +24,13 @@ h2,h3,h4,h5,h6,button,a {
 }
 
 h2 {
-  margin-bottom: 40px;
+  margin: 0 auto;
   font-size: 3em;
 }
 
 h3 {
   font-size: 2.25em;
+  margin-bottom: 24px;
 }
 
 h4 {
@@ -44,7 +47,7 @@ p {
 }
 
 img {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 a {
@@ -56,7 +59,7 @@ a {
   display: block;
   margin: 0 auto;
   width: 100%;
-  padding: 27px 0;
+  padding: 28px 0;
   font-size: 1.5em;
   height: 85px;
 }
@@ -68,21 +71,19 @@ a {
 
 .sections {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 88px;
 }
 
 .sections .anchors {
   position: absolute;
-  top: -6.25em;
+  top: -8.1em;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  height: 6.25em;
+  height: 8.1em;
   width: 100%;
-  max-width: 90em;
-  background-color: black;
+  max-width: 1440px;
+  background-color: white;
   z-index: 100;
 }
 
@@ -91,12 +92,12 @@ nav {
   justify-content: space-between;
   height: 100%;
   padding-top: .5em;
+  padding-top: .45em;
 }
 
 nav a {
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
   padding: 0;
 }
 
@@ -104,7 +105,7 @@ nav a {
   width: calc(50% - 5px);
   margin: 0;
   padding: 0;
-  padding-left: 3%;
+  padding-left: 2.8%;
   font-family: 'Raleway';
   text-align: left;
   white-space: nowrap;
@@ -133,11 +134,11 @@ nav .icon {
   display: flex;
   position: relative;
   white-space: normal;
-  height: 650px;
+  height: 735px;
 }
 
 .banner_img {
-  width: 60%;
+  width: 59.25%;
   margin: 0;
   object-fit: cover;
 }
@@ -145,15 +146,17 @@ nav .icon {
 .banner_text {
   background-color: black;
   margin: 0;
-  width: 40%;
+  width: 40.75%;
   padding-top: 8em;
   padding: 8em 3em 0;
+  padding: 10.7em 7.7% 0 3.9%;
 }
 
 .banner_title {
   color: #ffcf51;
   font-family: 'Raleway';
   margin: 0 auto 50px;
+  margin: 0 auto 15px;
   line-height: initial;
   font-size: 2.25em;
   text-transform: uppercase;
@@ -162,6 +165,7 @@ nav .icon {
 .banner_desc {
   color: white;
   margin: 0 auto 50px;
+  margin: 0 auto 30px;
   line-height: initial;
   font-size: 1em;
 }
@@ -170,12 +174,14 @@ nav .icon {
   color: #ffcf51;
   border: 1px solid #ffcf51;
   font-size: 1.5em;
+  padding-top: 30px;
 }
 
 #improv_section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 128px;
 }
 
 #improv_section h2 {
@@ -184,10 +190,11 @@ nav .icon {
 
 #improv_section p {
   text-align: center;
+  margin-bottom: 6px;
 }
 
 #improv_section * * {
-  width: calc(50% - .5em);
+  width: 60%;
   margin: initial auto;
 }
 
@@ -212,17 +219,18 @@ nav .icon {
 
 #improv_sec_classes_btn {
   background: #ffcf51;
+  width: 58.5%;
 }
 
 #improv_sec_shows_btn {
   background: #e8343a;
   color: white;
+  width: 58.5%;
 }
 
 .improv_sec_links {
   text-decoration: underline;
   color: black;
-  margin-top: 10px;
 }
 
 #improv_sec_shows_link {
@@ -235,11 +243,10 @@ nav .icon {
   justify-content: space-between;
   background-color: #55617b;
   color: white;
-  padding-top: 15px;
+  padding-top: 58px;
 }
 
 #services_section * {
-  width: calc(50% - 5px);
   width: calc(50% - .5em);
   text-align: center;
   margin-left: 0;
@@ -247,7 +254,7 @@ nav .icon {
 }
 
 #services_section img {
-  margin-bottom: 30px;
+  border: 1px red dotted;
 }
 
 #services_section div * {
@@ -258,6 +265,10 @@ nav .icon {
 
 #services_section h3,h4 {
   color: #ffcf51;
+}
+
+#services_section h3 {
+  margin-top: 32px;
 }
 
 ol {

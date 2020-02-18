@@ -30,10 +30,14 @@ var navLinks = document.getElementById("header"); // let navLinksSticky = navLin
 // navbar sticks to top on scroll
 
 function fixedToTop() {
-  // if (window.pageYOffset > navLinksSticky) {
   if (window.pageYOffset > 1) {
     navLinks.classList.add("header_sticky");
   } else {
     navLinks.classList.remove("header_sticky");
   }
 } // #endregion
+// get current year
+
+
+var date = new Date();
+document.getElementById("copyright").textContent = date.getFullYear();

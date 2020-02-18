@@ -27,7 +27,6 @@ const navLinks = document.getElementById("header");
 
 // navbar sticks to top on scroll
 function fixedToTop() {
-  // if (window.pageYOffset > navLinksSticky) {
   if (window.pageYOffset > 1) {
     navLinks.classList.add("header_sticky");
   } else {
@@ -35,3 +34,7 @@ function fixedToTop() {
   }
 }
 // #endregion
+
+// get current year
+let date = new Date();
+document.getElementById("copyright").textContent = date.getFullYear();

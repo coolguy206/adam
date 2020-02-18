@@ -1,6 +1,9 @@
 .slider {
   position: relative;
-  // margin-top: 100px;
+  margin-bottom: 92px;
+  background: black;
+
+  overflow: hidden;
 }
 
 .frame {
@@ -9,9 +12,7 @@
   // line-height: 0;
   overflow: hidden;
   white-space: nowrap;
-
-  // height: 650px;
-  height: 735px
+  height: 733px;  // same as .banner
 }
 
 .slides {
@@ -30,12 +31,9 @@
 
 .prev, .next {
   position: absolute;
-  top: 55%;
   display: block;
   cursor: pointer;
-
-  top: 45%;
-  top: 43%;
+  top: 43.3%;
 }
 
 .next {
@@ -48,4 +46,26 @@
 
 .next svg, .prev svg {
   width: 100px;
+}
+
+@media only screen and (max-width: 414px) {
+  .frame {
+    height: initial;
+  }
+
+  .next svg, .prev svg {
+    width: 50px;
+  }
+
+  .prev, .next {
+    top: 20%;
+  }
+
+  .next {
+    right: -12px;
+  }
+
+  .prev {
+    left: -12px;
+  }
 }

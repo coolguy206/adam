@@ -11,76 +11,71 @@
 </head>
 <body>
   <div class='wrapper'>
-    <img src="img/bg.jpg"
-      style="position: absolute;z-index: 9999;opacity: .35;max-width: 100%;display: block;top: 0;pointer-events: none;">
+    <!-- <img src="img/bg.jpg"
+      style="position: absolute;z-index: 9999;opacity: .35;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
+    <!-- <img src="img/bg_mobile.jpg"
+      style="position: absolute;z-index: 9999;opacity: .15;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
     <header id='header'>
-      <nav class='nav' id="nav_id">
-        <a href="javascript:void(0);" class="icon" onclick="toggleHamburger()">
+      <nav id="nav_id" class='nav'>
+        <a href="javascript:void(0);" id="hamburger_icon" onclick="toggleHamburger()">
           <i class="fa fa-bars"></i>
         </a>
         <a href='#top_anchor' id='brand'>Adam Dow</a>
-        <div id="navlinks_container">
+        <div>
           <a href="javascript:void(0);" id="hamburger_close" onclick="toggleHamburger()">
             <i class="far fa-times-circle"></i>
           </a>
-          <a href='#improv_anchor' class='nav_link'>Improv</a>
-          <a href='#services_anchor' class='nav_link'>Services</a>
-          <a href='#gallery_anchor' class='nav_link'>Gallery</a>
-          <a href='#about_anchor' class='nav_link'>About</a>
-          <a href='#contact_anchor' class='nav_link'>Contact</a>
+          <a href='#improv_anchor' onclick="toggleHamburger()">Improv</a>
+          <a href='#services_anchor' onclick="toggleHamburger()">Services</a>
+          <a href='#gallery_anchor' onclick="toggleHamburger()">Gallery</a>
+          <a href='#about_anchor' onclick="toggleHamburger()">About</a>
+          <a href='#contact_anchor' onclick="toggleHamburger()">Contact</a>
         </div>
       </nav>
     </header>
-    <div class="slider js_slider sections">
+    <section class="slider js_slider">
       <span id='top_anchor' class='anchors'></span>
       <div class="frame js_frame">
         <ul class="slides js_slides">
           <li class="js_slide">
             <div class='banner'>
-              <!-- <div class='test_img_container'> -->
-              <img src='img/banner_img03.jpg' alt='#' class='banner_img' />
-              <!-- </div> -->
-              <div class='banner_text'>
-                <p class='banner_title'>Improv Shows</p>
+              <img src='img/banner_img11.jpg' alt='#' />
+              <div>
+                <p class='banner_heading'>Improv Shows</p>
                 <p class='banner_desc'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna
                   aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
                 </p>
-                <a href='#' class='link_btns border_btns'>Read More</a>
+                <a href='#' class='link_btns bordered_btns'>Read More</a>
               </div>
             </div>
           </li>
           <li class="js_slide">
             <div class='banner'>
-              <!-- <div class='test_img_container'> -->
-              <img src='img/banner_img02.jpg' alt='#' class='banner_img' />
-              <!-- </div> -->
-              <div class='banner_text'>
-                <p class='banner_title'>Improv Shows</p>
+              <img src='img/banner_img12.jpg' alt='#' />
+              <div>
+                <p class='banner_heading'>Improv Shows</p>
                 <p class='banner_desc'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna
                   aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
                 </p>
-                <a href='#' class='link_btns border_btns'>Read More</a>
+                <a href='#' class='link_btns bordered_btns'>Read More</a>
               </div>
             </div>
           </li>
           <li class="js_slide">
             <div class='banner'>
-              <!-- <div class='test_img_container'> -->
-              <img src='img/banner_img01.jpg' alt='#' class='banner_img' />
-              <!-- </div> -->
-              <div class='banner_text'>
-                <p class='banner_title'>Corporate Workshop Team Building</p>
-                <!-- <p class='banner_title'>Corporate</p> -->
+              <img src='img/banner_img03.jpg' alt='#' />
+              <div>
+                <p class='banner_heading'>Corporate Workshop Team Building</p>
                 <p class='banner_desc'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna
                   aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
                 </p>
-                <a href='#' class='link_btns border_btns'>Read More</a>
+                <a href='#' class='link_btns bordered_btns'>Read More</a>
               </div>
             </div>
           </li>
@@ -104,39 +99,39 @@
           </g>
         </svg>
       </span>
-    </div>
-    <div class='sections' id='improv_section'>
+    </section>
+    <section id='improv_section'>
       <span id='improv_anchor' class='anchors'></span>
       <h2>Improv</h2>
-      <div id='improv_sec_classes'>
+      <div id='improv_classes'>
         <h3>Classes</h3>
-        <img src='img/improv_img01.jpg' alt='#' class='improv_sec_imgs' />
+        <img src='img/improv_img01.jpg' alt='#' />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna
           aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
         </p>
-        <a class='link_btns' id='improv_sec_classes_btn'>Sign Up</a>
-        <a href='#' class='link_btns improv_sec_links'>See All Classes</a>
+        <a class='link_btns improv_btns' id='improv_classes_btn'>Sign Up</a>
+        <a href='#' class='link_btns improv_links'>See All Classes</a>
       </div>
-      <div id='improv_sec_shows'>
+      <div id='improv_shows'>
         <h3>Shows</h3>
-        <img src='img/improv_img02.jpg' alt='#' class='improv_sec_imgs' />
+        <img src='img/improv_img15.jpg' alt='#' />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna
           aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
         </p>
-        <a class='link_btns' id='improv_sec_shows_btn'>Buy Tickets</a>
-        <a href='#' class='link_btns improv_sec_links' id='improv_sec_shows_link'>See All Shows</a>
+        <a class='link_btns improv_btns' id='improv_shows_btn'>Buy Tickets</a>
+        <a href='#' class='link_btns improv_links' id='improv_shows_link'>See All Shows</a>
       </div>
-    </div>
-    <div class='sections' id='services_section'>
+    </section>
+    <section id='services_section'>
       <span id='services_anchor' class='anchors'></span>
       <h2>Services</h2>
       <!-- <div class='services_sections' id='services_sec_workshops'> -->
       <h3 id='workshop_title'>Corporate Workshop Team Building</h3>
-      <img src='img/services_img01.jpg' alt='#' id='workshop_img' />
+      <img src='img/services_img15.jpg' alt='#' id='workshop_img' />
       <div id='workshop_desc'>
         <h4>How It Works</h4>
         <p>
@@ -151,13 +146,13 @@
         </p>
       </div>
       <div id='workshop_btn'>
-        <a class='link_btns border_btns'>Request Quote</a>
+        <a class='link_btns bordered_btns'>Request Quote</a>
       </div>
 
       <!-- </div>
       <div class='services_sections' id='services_sec_classes'> -->
       <h3 id='classes_title'>Improv Classes</h3>
-      <img src='img/services_img01.jpg' alt='#' id='classes_img' />
+      <img src='img/services_img11.jpg' alt='#' id='classes_img' />
       <div id='classes_desc'>
         <h4>How It Works</h4>
         <p>
@@ -174,12 +169,12 @@
         </p>
       </div>
       <div id='classes_btn'>
-        <a class='link_btns border_btns'>Sign Up</a>
+        <a class='link_btns bordered_btns'>Sign Up</a>
       </div>
       <!-- </div>
       <div class='services_sections' id='services_sec_film'> -->
       <h3 id='production_title'>TV/Film Production</h3>
-      <img src='img/services_img01.jpg' alt='#' id='production_img' />
+      <img src='img/services_img20.jpg' alt='#' id='production_img' />
       <div id='production_desc'>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam perferendis fugit doloribus qui magni ratione
@@ -194,12 +189,12 @@
         </ol>
       </div>
       <div id='production_btn'>
-        <a class='link_btns border_btns'>Contact Me</a>
+        <a class='link_btns bordered_btns'>Contact Me</a>
       </div>
       <!-- </div>
       <div class='services_sections' id='services_sec_acting'> -->
       <h3 id='acting_title'>Acting</h3>
-      <img src='img/services_img01.jpg' alt='#' id='acting_img' />
+      <img src='img/services_img25.jpg' alt='#' id='acting_img' />
       <div id='acting_desc'>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim itaque adipisci alias sed atque quas dolore,
@@ -208,70 +203,74 @@
         </p>
       </div>
       <div id='acting_btn'>
-        <a class='link_btns border_btns'>Contact Me</a>
+        <a class='link_btns bordered_btns'>Contact Me</a>
       </div>
       <!-- </div> -->
-    </div>
-    <div class='sections' id='gallery_section'>
+    </section>
+    <section id='gallery_section'>
       <span id='gallery_anchor' class='anchors'></span>
       <h2>Gallery</h2>
-      <div id='gallery_sec_videos'>
-        <h3 class='gallery_sec_subheadings'>Videos</h3>
-        <ul class='gallery_slider'>
-          <!-- items are clickable -->
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
+      <div>
+        <h3>Videos</h3>
+        <ul>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
         </ul>
-        <a href='#' class='more_media_links'>See More Videos</a>
+        <a href='#'>See More Videos</a>
       </div>
-      <div id='gallery_sec_photos'>
-        <h3 class='gallery_sec_subheadings'>Photos</h3>
-        <ul class='gallery_slider'>
-          <!-- items are clickable -->
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img class='media_thumbnails' src='img/videos_img01.jpg' alt='#' /></li>
+      <div>
+        <h3>Photos</h3>
+        <ul>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
+          <li><img src='img/videos_img01.jpg' alt='#' /></li>
         </ul>
-        <a href='#' class='more_media_links'>See More Photos</a>
+        <a href='#'>See More Photos</a>
       </div>
-    </div>
-    <div class='sections' id='about_section'>
+    </section>
+    <section id='about_section'>
       <span id='about_anchor' class='anchors'></span>
       <h2>About</h2>
-      <div class='about_sections' id='about_sec_entrepreneur'>
+      <div>
         <h3>Entrepreneur</h3>
-        <img src='img/about_img01.jpg' alt='#' class='about_sec_imgs' />
+        <img src='img/about_img01.jpg' alt='#' />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, possimus dolores culpa.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna
+          aliqua.
         </p>
       </div>
-      <div class='about_sections' id='about_sec_producer'>
+      <div>
         <h3>Producer</h3>
-        <img src='img/about_img01.jpg' alt='#' class='about_sec_imgs' />
+        <img src='img/about_img02.jpg' alt='#' />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, possimus dolores culpa.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna
+          aliqua.
         </p>
       </div>
-      <div class='about_sections' id='about_sec_actor'>
+      <div>
         <h3>Actor</h3>
-        <img src='img/about_img01.jpg' alt='#' class='about_sec_imgs' />
+        <img src='img/about_img03.jpg' alt='#' />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, possimus dolores culpa.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna
+          aliqua.
         </p>
       </div>
-    </div>
-    <div class='sections' id='contact_section'>
+    </section>
+    <section id='contact_section'>
       <span id='contact_anchor' class='anchors'></span>
       <h2>Contact</h2>
       <div class='contact_info'>
-        <p>Email: adamddow@gmail.com</p>
-        <p>Phone USA: 206-473-9211</p>
-        <p>Phone India: +919152730446</p>
+        <a href='mailto:adamddow@gmail.com?Subject=Hi%20From%20Adams%20Site'>Email: adamddow@gmail.com</a>
+        <a href='tel:206-473-9211'>Phone USA: 206-473-9211</a>
+        <a href='tel:+919152730446'>Phone India: +919152730446</a>
       </div>
       <form>
         <div class='form_grp'>
@@ -285,9 +284,9 @@
         <div class='form_grp'>
           <label>Services</label>
           <select>
-            <option value='workshops'>Corporate Workshops Team Building</option>
-            <option value='classes'>Improv Classes</option>
-            <option value='media-production'>TV/Film Production</option>
+            <option value='corporate workshops'>Corporate Workshops Team Building</option>
+            <option value='improv classes'>Improv Classes</option>
+            <option value='tv film production'>TV/Film Production</option>
             <option value='acting'>Acting</option>
           </select>
         </div>
@@ -296,17 +295,17 @@
           <textarea></textarea>
         </div>
         <div class='form_grp'>
-          <button class='link_btns' id='submit_btn'>Send</button>
+          <button class='link_btns'>Send</button>
         </div>
       </form>
-    </div>
+    </section>
     <footer>
       <div id='footer_nav'>
-        <a href='#'>Improv</a>
-        <a href='#'>Services</a>
-        <a href='#'>Gallery</a>
-        <a href='#'>About</a>
-        <a href='#'>Contact</a>
+        <a href='#improv_anchor'>Improv</a>
+        <a href='#services_anchor'>Services</a>
+        <a href='#gallery_anchor'>Gallery</a>
+        <a href='#about_anchor'>About</a>
+        <a href='#contact_anchor'>Contact</a>
       </div>
       <div id='footer_socialmedia'>
         <a href='#'><i class="fab fa-facebook-square"></i></a>
@@ -315,10 +314,10 @@
         <a href='#'><i class="fab fa-linkedin"></i></a>
       </div>
       <div class='contact_info'>
-        <p>Email: adamddow@gmail.com</p>
-        <p>Phone USA: 206-473-9211</p>
-        <p>Phone India: +919152730446</p>
-        <p>copyright 2020</p>
+        <a href='mailto:adamddow@gmail.com?Subject=Hi%20From%20Adams%20Site'>Email: adamddow@gmail.com</a>
+        <a href='tel:206-473-9211'>Phone USA: 206-473-9211</a>
+        <a href='tel:+919152730446'>Phone India: +919152730446</a>
+        <p>copyright <span id="copyright"></span></p>
       </div>
     </footer>
   </div>

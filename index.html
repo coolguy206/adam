@@ -7,12 +7,18 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:700|Montserrat&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='css/less/lory.css' rel='stylesheet'>
+  <!-- <link href='css/less/gallery_lightbox.css' rel='stylesheet'> -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/less/slick.css" />
   <link href='css/less/styles.css' rel='stylesheet'>
 </head>
 <body>
   <div class='wrapper'>
     <!-- <img src="img/bg.jpg"
-      style="position: absolute;z-index: 9999;opacity: .35;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
+      style="position: absolute;z-index: 9999;opacity: .25;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
     <!-- <img src="img/bg_mobile.jpg"
       style="position: absolute;z-index: 9999;opacity: .15;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
     <header id='header'>
@@ -33,7 +39,7 @@
         </div>
       </nav>
     </header>
-    <section class="slider js_slider">
+    <section class="slider_banner js_slider">
       <span id='top_anchor' class='anchors'></span>
       <div class="frame js_frame">
         <ul class="slides js_slides">
@@ -85,8 +91,7 @@
       <span class="js_prev prev">
         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 501.5 501.5">
           <g>
-            <path fill="rgb(255, 207, 81)"
-              d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z" />
+            <path d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z" />
           </g>
         </svg>
       </span>
@@ -94,8 +99,7 @@
       <span class="js_next next">
         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 501.5 501.5">
           <g>
-            <path fill="rgb(255, 207, 81)"
-              d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z" />
+            <path d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z" />
           </g>
         </svg>
       </span>
@@ -210,27 +214,189 @@
     <section id='gallery_section'>
       <span id='gallery_anchor' class='anchors'></span>
       <h2>Gallery</h2>
-      <div>
+      <div class='gallery_thumbnails'>
         <h3>Videos</h3>
-        <ul>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-        </ul>
-        <a href='#'>See More Videos</a>
+        <div class="slider gallery_responsive">
+          <div>
+            <a href="#vid1">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid2">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid3">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid4">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid5">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid6">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid7">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#vid8">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+        </div>
+        <div class="lightbox_container">
+          <div class="lightbox animate" id="vid1">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid2">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid3">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid4">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid5">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid6">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid7">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+          <div class="lightbox animate" id="vid8">
+            <a class="lightboxClose" href="#!" onclick="vid1.pauseVideo()">
+              <iframe class="animate" width="960" height="510" src="https://www.youtube.com/embed/ZVkT-kunlWw?enablejsapi=1"
+                frameborder="0" allowfullscreen onload="vid1=new YT.Player(this)"></iframe>
+            </a>
+          </div>
+        </div>
+        <a class='more_media_link' href='#'>See More Videos</a>
       </div>
-      <div>
+      <div class='gallery_thumbnails'>
         <h3>Photos</h3>
-        <ul>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-          <li><img src='img/videos_img01.jpg' alt='#' /></li>
-        </ul>
-        <a href='#'>See More Photos</a>
+        <div class="slider gallery_responsive">
+          <div>
+            <a href="#img1">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img2">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img3">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img4">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img5">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img6">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img7">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+          <div>
+            <a href="#img8">
+              <img src="img/videos_img01.jpg" />
+            </a>
+          </div>
+        </div>
+        <div class="lightbox_container">
+          <div class="lightbox animate" id="img1">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img2">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img3">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img4">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img5">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img6">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img7">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+          <div class="lightbox animate" id="img8">
+            <a class="lightboxClose" href="#!">
+              <img class="animate" src="http://placehold.it/960x501" />
+            </a>
+          </div>
+        </div>
+        <a class='more_media_link' href='#'>See More Photos</a>
       </div>
     </section>
     <section id='about_section'>
@@ -272,18 +438,19 @@
         <a href='tel:206-473-9211'>Phone USA: 206-473-9211</a>
         <a href='tel:+919152730446'>Phone India: +919152730446</a>
       </div>
-      <form>
+      <form action='form.js' method='post'>
         <div class='form_grp'>
           <label>Name</label>
-          <input />
+          <input type="text" name="name" required />
         </div>
         <div class='form_grp'>
           <label>Email</label>
-          <input />
+          <input type="text" name="email" required />
         </div>
         <div class='form_grp'>
           <label>Services</label>
-          <select>
+          <select name='services' required>
+            <option value="" selected disabled>please select an option...</option>
             <option value='corporate workshops'>Corporate Workshops Team Building</option>
             <option value='improv classes'>Improv Classes</option>
             <option value='tv film production'>TV/Film Production</option>
@@ -292,7 +459,7 @@
         </div>
         <div class='form_grp_txtarea'>
           <label>Message</label>
-          <textarea></textarea>
+          <textarea type='text' name='message' required></textarea>
         </div>
         <div class='form_grp'>
           <button class='link_btns'>Send</button>
@@ -323,6 +490,13 @@
   </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.5.3/lory.min.js'></script>
+  <!-- youtube api to prevent play when lightbox is unclicked -->
+  <script src="https://www.youtube.com/player_api"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
   <script src='js/babel/scripts.js'></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>

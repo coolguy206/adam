@@ -4,18 +4,19 @@
   <div class='contact_info'>
     include "contact_info.html"
   </div>
-  <form>
+  <form action='form.js' method='post'>
     <div class='form_grp'>
       <label>Name</label>
-      <input />
+      <input type="text" name="name" required />
     </div>
     <div class='form_grp'>
       <label>Email</label>
-      <input />
+      <input type="text" name="email" required />
     </div>
     <div class='form_grp'>
       <label>Services</label>
-      <select>
+      <select name='services' required>
+        <option value="" selected disabled>please select an option...</option>
         <option value='corporate workshops'>Corporate Workshops Team Building</option>
         <option value='improv classes'>Improv Classes</option>
         <option value='tv film production'>TV/Film Production</option>
@@ -24,7 +25,7 @@
     </div>
     <div class='form_grp_txtarea'>
       <label>Message</label>
-      <textarea></textarea>
+      <textarea type='text' name='message' required></textarea>
     </div>
     <div class='form_grp'>
       <button class='link_btns'>Send</button>

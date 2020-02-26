@@ -1,84 +1,4 @@
-@font-headings: 'Raleway';
-@font-paragraphs: 'Montserrat';
-@pg-max-width: 1440px;
-@nav-height: 8.1em;
-@mobile-side-paddings: calc(100% - 1.5em);
-@mobile-btn-width: calc(100% - 1em);
-@orange: rgb(255, 207, 81);
-@red: rgb(232, 52, 58);
-@lightblue: rgb(85, 97, 123);
-@darkblue: rgb(33, 58, 95);
-
-* {
-  box-sizing: border-box;
-  font-family: @font-paragraphs;
-  text-align: center;
-}
-
-body, html {
-  margin: 0 auto;
-  padding: 0;
-  font-size: 100%;
-  background-color: white;
-}
-
-.wrapper {
-  max-width: @pg-max-width;
-  margin: 0 auto;
-}
-
-h2, h3, h4, h5, h6, button, a {
-  font-family: @font-headings;
-  text-transform: uppercase;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 3em;
-}
-
-h3 {
-  font-size: 2.25em;
-  margin-bottom: 24px;
-}
-
-h4 {
-  font-size: 1.5em;
-}
-
-p, input, select, textarea {
-  font-size: 1em;
-}
-
-img {
-  margin-bottom: 18px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.link_btns {
-  display: block;
-  margin: 0 auto;
-  padding: 28px 0;
-  font-size: 1.5em;
-}
-
-.bordered_btns {
-  color: @orange;
-  border: 1px solid @orange;
-}
-
-section {
-  position: relative;
-}
-
-section .anchors {
-  position: absolute;
-  top: -@nav-height;
-}
+@import "global.less";
 
 // #region header
 header {
@@ -88,7 +8,8 @@ header {
   width: 100%;
   height: @nav-height;
   background-color: white;
-  z-index: 100;
+  box-shadow: 0 4px 6px -8px black;
+  z-index: 1000;
 
   nav {
     display: flex;
@@ -153,7 +74,7 @@ header {
   display: flex;
   position: relative;
   white-space: normal;
-  height: 733px; // same as .frame
+  height: @banner-slider-height; // same as .frame
 
   img {
     width: 59.25%;
@@ -232,11 +153,19 @@ header {
 
     #improv_classes_btn {
       background: @orange;
+
+      &:hover {
+        background: @orange * @btn-hover;
+      }
     }
 
     #improv_shows_btn {
       background: @red;
       color: white;
+
+      &:hover {
+        background: @red * @btn-hover;
+      }
     }
 
     .improv_links {
@@ -390,38 +319,13 @@ header {
   margin-bottom: 0; // placeholder
   padding-top: 40px;
 
-  div {
-    margin-bottom: 42px;
-  }
-
   h3 {
     margin-left: 20%;
     margin-bottom: 43px;
     text-align: left;
   }
-
-
-  ul {
-    padding-left: 0;
-    margin-top: 0;
-
-    display: flex;
-    list-style-type: none;
-    margin-bottom: 35px;
-    justify-content: space-between;
-  }
-
-  li {
-    width: calc(20% - .95em);
-    margin-left: 0;
-    margin-right: 0
-  }
-
-  img {
-    width: 100%;
-  }
-
-  a {
+  
+  .more_media_link {
     display: block;
     color: black;
     font-family: @font-headings;
@@ -543,14 +447,24 @@ form {
     background-color: @red;
     width: 74.25%;
     margin-right: 0 !important;
+
+    &:hover {
+      background: @red * @btn-hover;
+    }
   }
 }
 // #endregion
 
 // #region footer
 footer {
-  margin-bottom: 30px;
-  padding-top: 100px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+
+  font-size: 1em;
+
+  .contact_info {
+    margin-bottom: 0;
+  }
 }
 
 #footer_nav, #footer_socialmedia {
@@ -562,7 +476,7 @@ footer {
 }
 
 #footer_nav {
-  font-size: 1em;
+  // font-size: 1em;
 
   a:hover {
     text-decoration: underline;
@@ -575,13 +489,19 @@ footer {
 }
 
 i {
-  font-size: 34px;
-  color: rgb(173, 181, 189);
+  @icon-color: rgb(173, 181, 189);
+  font-size: 2.125em;
+  color: @icon-color;
+
+  &:hover {
+    color: @icon-color * @btn-hover;
+  }
 }
 // #endregion
 
 
-// #region media queries
+
+// -------------- media queries -------------------- //
 @media only screen and (max-width: 768px) {
   header {
     height: 4em;
@@ -731,21 +651,9 @@ i {
   }
 
   #gallery_section {
-    h3, a {
+    h3, .more_media_link {
       margin: 0 auto;
       text-align: center;
-    }
-
-    ul {
-      display: block;
-    }
-
-    li {
-      width: 100%;
-    }
-
-    li:not(:first-child) {
-      display: none;
     }
   }
 
@@ -811,4 +719,3 @@ i {
     width: 100%;
   }
 }
-// #endregion

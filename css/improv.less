@@ -1,0 +1,78 @@
+@import "global.less";
+
+#improv_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-bottom: 131px;
+  margin-bottom: 105px;
+
+  h2 {
+    width: 100%;
+
+    margin-top: 88px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(50% - .65em);
+    margin-bottom: 12px;
+
+    * {
+      width: 60%;
+      margin: initial auto;
+    }
+    
+    h3 {
+      margin-top: 33px;
+      margin-top: 30px;
+      margin-bottom: 26px;
+    }
+    
+    img {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+
+    p {
+      margin-top: 0;
+
+      margin-bottom: 3px; // placeholder; remove
+    }
+
+    .improv_btns {
+      width: 59%;
+      padding: 27.5px 0 26px;
+      padding: 25px 0 22px;
+    }
+
+    #improv_classes_btn {
+      background: @orange;
+
+      &:hover {
+        background: @orange * @btn-hover;
+      }
+    }
+
+    #improv_shows_btn {
+      background: @red;
+      color: white;
+
+      &:hover {
+        background: @red * @btn-hover;
+      }
+    }
+
+    .improv_links {
+      text-decoration: underline;
+      color: black;
+    }
+
+    #improv_shows_link {
+      color: @red;
+    }
+  }
+}

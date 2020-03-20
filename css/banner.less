@@ -1,0 +1,105 @@
+@import "global.less";
+
+.banner_slick {
+  background: black;
+  overflow: hidden;
+
+  .slick-slide {
+    font-size: 0;
+  }
+
+  // buttons
+  .slick-prev, .slick-next {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+
+    height: 100%;
+    width: 0;
+
+    z-index: 500;
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 44%;
+      top: 42.8%;
+
+      height: 100px;
+      width: 100px;
+      // height: 98px;
+      width: 90px;
+
+      opacity: .5;
+      opacity: .75;
+    }
+
+    path {
+      fill: @orange;
+    }
+
+    path:hover {
+      fill: @orange * @btn-hover;
+    }
+  }
+
+  .slick-prev {
+    svg {
+      left: 9px;
+    }
+  }
+
+  .slick-next {
+    svg {
+      right: 9px;
+    }
+  }
+}
+
+.banner_inside_slide {
+  display: flex;
+  position: relative;
+  margin: 0;
+  font-size: 16px;  // need font-size bc parent font-size:0
+
+  img {
+    width: 59.25%;
+    // width: 60%;
+    margin: 0;
+  }
+
+  div {
+    display: inline-block;
+    width: 40.75%;
+    width: unset;
+    padding: 14.15% 7.7% 0 3.9%;
+    padding: 11.75% 7.8% 0 3.85%;
+    margin: 0;
+    
+    .banner_heading {
+      color: @orange;
+      font-family: @font-headings;
+      font-size: 2.25em;
+      margin: 0 auto 15px;
+      text-transform: uppercase;
+    }
+
+    .banner_desc {
+      color: white;
+      margin: 0 auto 35px;
+    }
+
+    a {
+      width: 99.75%;
+      padding-top: 27px;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      padding-bottom: 22px;
+    }
+  }
+}

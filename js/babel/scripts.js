@@ -1,29 +1,13 @@
 "use strict";
 
-// #region lory.js slideshow
-// document.addEventListener('DOMContentLoaded', function () {
-//   var simple = document.querySelector('.js_slider');
-// var multiSlidesVideos = document.querySelector('.js_multislides_videos');
-// var multiSlidesPhotos = document.querySelector('.js_multislides_photos');
-// lory(simple, {
-//   infinite: 1
-// });
-// lory(multiSlidesVideos, {
-//   infinite: 1,
-//   slidesToScroll: 1
-// });
-// lory(multiSlidesPhotos, {
-//   infinite: 4,
-//   slidesToScroll: 4
-// });
-// });
-// #endregion
-// #region slick carousel
 $(document).ready(function () {
+  // #region slick carousel
   $('.banner_slick').slick({
     dots: false,
     infinite: true,
-    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -90,16 +74,8 @@ function fixedToTop() {
     navLinks.classList.remove("header_sticky");
   }
 } // #endregion
-// #region iframe video stops at lightbox close
-// const video = document.getElementById('test_player');
-// const close = document.querySelector('.lightboxClose');
-// close.addEventListener('click', () => {
-//   video.stopVideo();
-//   console.log('clicked');
-// });
-// #endregion
-// get current year
+// #region get current year
 
 
 var date = new Date();
-document.getElementById("copyright").textContent = date.getFullYear();
+document.getElementById("copyright").textContent = date.getFullYear(); // #endregion

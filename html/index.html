@@ -6,12 +6,20 @@
   <title>Adam Dow</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:700|Montserrat&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/less/slick.css" />
-  <link href='css/less/styles.css' rel='stylesheet'>
+
+  <link href='css/less/styles.css' rel='stylesheet' />
+  <link href='css/less/svvg-styles.css' rel='stylesheet' />
+  <link href='css/less/slick.css' rel='stylesheet' />
+  <link href='css/less/media-queries.css' rel='stylesheet' />
+  <!-- test -->
+  <!-- <link href='css/less/test_videos.css' rel='stylesheet'> -->
+  <!-- <link rel="stylesheet" href="css/less/svvg-styles.css"> -->
+  <!-- end test -->
 </head>
 <body>
   <div class='wrapper'>
@@ -29,11 +37,12 @@
     include "footer_section.html"
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- carousel; not lightbox -->
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <!-- youtube api to prevent play when lightbox is unclicked -->
-  <!-- <script src="https://www.youtube.com/player_api"></script> -->
+  <!-- load video thumbnails and iframes -->
+  <script type="text/javascript" src="js/babel/speedvault.js"></script>
   <script src='js/babel/scripts.js'></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>

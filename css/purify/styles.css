@@ -99,7 +99,6 @@ header {
   position: -webkit-sticky;
   top: 0;
   width: 100%;
-  height: 7.65em;
   background-color: white;
   box-shadow: 0 4px 6px -8px black;
   z-index: 1000;
@@ -108,31 +107,30 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  height: 100%;
-  padding-top: .45em;
-}
-
-header nav #brand {
-  margin: 0;
-  padding: 0;
-  padding-left: 2.8%;
-  text-align: left;
-  font-family: 'Raleway';
-  font-size: 3.75em;
-  font-size: 3.5em;
-  white-space: nowrap;
-  width: calc(50% - .5em);
-}
-
-header nav #brand:hover {
-  text-decoration: none;
+  align-items: center;
 }
 
 header nav a {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0;
-  height: fit-content;
+}
+
+header nav a#brand {
+  margin: 0;
+  padding: 0 0 0 2.8%;
+  text-align: left;
+  font-family: 'Raleway';
+  font-size: 3.5em;
+  white-space: nowrap;
+  flex-basis: 50%;
+}
+
+header nav a#brand:hover {
+  text-decoration: none;
+}
+
+header nav a#hamburger_close,header nav a#hamburger_icon {
+  display: none;
 }
 
 header nav a:hover {
@@ -143,18 +141,8 @@ header nav div {
   display: inline-flex;
   justify-content: space-around;
   margin: 0;
-  padding-top: .625em;
-  padding-top: .55em;
   font-size: 1em;
-  width: calc(50% - .5em);
-}
-
-header nav div #hamburger_close {
-  display: none;
-}
-
-header nav #hamburger_icon {
-  display: none;
+  flex-basis: 50%;
 }
 
 .banner_slick {

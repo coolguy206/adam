@@ -115,7 +115,8 @@ function toggleHamburger() {
 
 // #region navbar sticky
 // sticky the horizontal navbar to the top after scroll to its div
-window.onscroll = function() { fixedToTop() };
+// window.onscroll = function() { fixedToTop() };
+
 const navLinks = document.getElementById("header");
 // let navLinksSticky = navLinks.offsetTop;
 

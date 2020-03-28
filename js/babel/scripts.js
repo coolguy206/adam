@@ -66,11 +66,8 @@ function toggleHamburger() {
 } // #endregion
 // #region navbar sticky
 // sticky the horizontal navbar to the top after scroll to its div
+// window.onscroll = function() { fixedToTop() };
 
-
-window.onscroll = function () {
-  fixedToTop();
-};
 
 var navLinks = document.getElementById("header"); // let navLinksSticky = navLinks.offsetTop;
 // navbar sticks to top on scroll

@@ -38,12 +38,10 @@ h2,h3,h4,h5,h6,button,a,span {
 }
 
 h2 {
-  font-size: 3em;
   font-size: 2.75em;
 }
 
 h3 {
-  font-size: 2.25em;
   font-size: 2.15em;
   margin-bottom: 24px;
 }
@@ -69,8 +67,13 @@ a {
 .link_btns {
   display: block;
   margin: 0 auto;
-  padding: 28px 0;
   font-size: 1.5em;
+}
+
+@media screen and (max-width:414px) {
+  .link_btns {
+    width: 100%;
+  }
 }
 
 .bordered_btns {
@@ -163,28 +166,50 @@ header nav #hamburger_icon {
   font-size: 0;
 }
 
-.banner_inside_slide {
-  display: flex;
+.banner_container {
   position: relative;
+  display: flex;
   margin: 0;
   font-size: 16px;
 }
 
-.banner_inside_slide img {
+@media screen and (max-width:414px) {
+  .banner_container {
+    flex-direction: column;
+  }
+}
+
+.banner_container img {
   width: 59.25%;
   margin: 0;
 }
 
-.banner_inside_slide div {
-  display: inline-block;
-  width: 40.75%;
-  width: unset;
-  padding: 14.15% 7.7% 0 3.9%;
-  padding: 11.75% 7.8% 0 3.85%;
-  margin: 0;
+@media screen and (max-width:414px) {
+  .banner_container img {
+    width: calc(100% - 1.5em);
+    margin: 0 auto;
+  }
 }
 
-.banner_inside_slide div .banner_heading {
+.banner_container .banner_content {
+  display: inline-block;
+  width: unset;
+  padding: 11.75% 7.8% 0 3.85%;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-self: center;
+}
+
+@media screen and (max-width:414px) {
+  .banner_container .banner_content {
+    margin: 0 auto;
+    width: calc(100% - 1.5em);
+    padding: 1.5em 0;
+  }
+}
+
+.banner_container .banner_content h2 {
   color: #ffcf51;
   font-family: 'Raleway';
   font-size: 2.25em;
@@ -192,17 +217,52 @@ header nav #hamburger_icon {
   text-transform: uppercase;
 }
 
-.banner_inside_slide div .banner_desc {
+@media screen and (max-width:1000px) and (min-width:414px) {
+  .banner_container .banner_content h2 {
+    font-size: 3.6vw;
+  }
+}
+
+@media screen and (max-width:414px) {
+  .banner_container .banner_content h2 {
+    font-size: 1.95em;
+    margin: 0 auto 18px;
+  }
+}
+
+.banner_container .banner_content p {
   color: white;
   margin: 0 auto 35px;
 }
 
-.banner_inside_slide div a {
+@media screen and (max-width:1000px) and (min-width:414px) {
+  .banner_container .banner_content p {
+    font-size: 1.63vw;
+  }
+}
+
+@media screen and (max-width:414px) {
+  .banner_container .banner_content p {
+    margin-bottom: 16px;
+  }
+}
+
+.banner_container .banner_content a {
   width: 99.75%;
-  padding-top: 27px;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  padding-bottom: 22px;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide2 {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width:414px) {
+  .slide2 {
+    flex-direction: column;
+  }
 }
 
 #improv_section {
@@ -529,6 +589,10 @@ form button {
   background-color: #e8343a;
   width: 74.25%;
   margin-right: 0 !important;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form button:hover {
@@ -612,41 +676,6 @@ i:hover {
 }
 
 @media only screen and (max-width:414px) {
-  .link_btns {
-    width: 100%;
-  }
-
-  .banner_inside_slide {
-    flex-direction: column;
-  }
-
-  .banner_inside_slide img {
-    width: calc(100% - 1.5em);
-    margin: 0 auto;
-  }
-
-  .banner_inside_slide div {
-    margin: 0 auto;
-    width: calc(100% - 1.5em);
-    padding: 0;
-    padding-top: 1.5em;
-  }
-
-  .banner_inside_slide div .banner_heading {
-    font-size: 1.95em;
-    margin: 0 auto 18px;
-  }
-
-  .banner_inside_slide div .banner_desc {
-    margin-bottom: 16px;
-  }
-
-  .banner_inside_slide div a {
-    width: 100%;
-    padding-top: 18px;
-    padding-bottom: 20px;
-  }
-
   #improv_section {
     flex-direction: column;
   }

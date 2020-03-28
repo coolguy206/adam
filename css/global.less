@@ -4,6 +4,7 @@
 // @nav-height: 8.1em;
 @nav-height: 7.65em;
 @banner-slider-height: 733px;
+@btn-height: 76px;
 @mobile-side-paddings: calc(100% - 1.5em);
 @mobile-btn-width: calc(100% - 1em);
 @orange: rgb(255, 207, 81);
@@ -42,12 +43,12 @@ h2, h3, h4, h5, h6, button, a, span {
 }
 
 h2 {
-  font-size: 3em;
+  // font-size: 3em;
   font-size: 2.75em
 }
 
 h3 {
-  font-size: 2.25em;
+  // font-size: 2.25em;
   font-size: 2.15em;
   margin-bottom: 24px;
 }
@@ -74,8 +75,13 @@ a {
 .link_btns {
   display: block;
   margin: 0 auto;
-  padding: 28px 0;
   font-size: 1.5em;
+
+  @media screen {
+    @media (max-width: 414px) {
+      width: 100%;
+    }
+  }
 }
 
 .bordered_btns {

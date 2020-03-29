@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('.banner_slick').slick({
         dots: false,
         infinite: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 4000,
         speed: 800,
         slidesToShow: 1,
@@ -102,13 +102,16 @@ $('.gallery_thumbnails ul').slick({
 //lity lightbox
 $(document).on('click', '[data-lightbox]', lity);
 
+
+
 // #region hamburger menu
 function toggleHamburger() {
-    var x = document.getElementById("nav_id");
-    if (x.className === "nav") {
-        x.className += " responsive";
+    var div = $('#nav_id div');
+    // console.log(div);
+    if (div[0].className == "active") {
+        div[0].className = "";
     } else {
-        x.className = "nav";
+        div[0].className = "active";
     }
 }
 // #endregion

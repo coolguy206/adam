@@ -28,15 +28,17 @@
 
         svg {
             position: absolute;
-
             height: 90px;
             width: 90px;
-
-            // opacity: .5;
             opacity: .75;
 
+            @media screen and (max-width: 768px) {
+                width: 70px;
+                height: 70px;
+            }
+
             &:hover {
-              opacity:1;
+                opacity: 1;
             }
         }
 
@@ -66,16 +68,29 @@
     flex-wrap: wrap;
     margin: 0;
     align-items: center;
+    padding: 1% 0 0;
+
+    a,
+    div {
+        flex-basis: 50%;
+
+        @media screen and (max-width: 414px) {
+            flex-basis: 100%;
+        }
+    }
 
 
     a {
-        flex-basis: 50%;
 
         img {}
     }
 
     div {
-        flex-basis: 50%;
+
+        @media screen and (max-width: 414px) {
+            margin: 5% 0 0;
+            padding: 0 0 10%;
+        }
 
         h2 {
             color: @orange;
@@ -83,6 +98,10 @@
             font-size: 2.25em;
             margin: @margin;
             text-transform: uppercase;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1.5em;
+            }
 
         }
 
@@ -92,12 +111,25 @@
             margin: @margin;
             width: 65%;
 
+            @media screen and (max-width: 768px) {
+                font-size: .9em;
+            }
+
         }
 
 
         a {
             padding: 3% 5%;
             display: inline-block;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+                padding: 2% 5%;
+            }
+
+            @media screen and (max-width: 414px){
+                width: auto;
+            }
 
             &:hover {
                 color: #000;

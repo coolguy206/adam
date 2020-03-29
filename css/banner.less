@@ -1,165 +1,112 @@
 @import "global.less";
 
 .banner_slick {
-  background: black;
-  overflow: hidden;
+    background: black;
+    overflow: hidden;
 
-  .slick-slide {
-    font-size: 0;
-  }
-
-  // slider buttons
-  .slick-prev, .slick-next {
-    position: absolute;
-    display: block;
-    cursor: pointer;
-
-    height: 100%;
-    width: 0;
-
-    z-index: 500;
-
-    &:before {
-      content: "";
-      width: 0;
-      height: 0;
+    .slick-slide {
+        // font-size: 0;
     }
 
-    svg {
-      position: absolute;
-      // top: 44%;
-      top: 42.8%;
+    // slider buttons
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        display: block;
+        cursor: pointer;
 
-      height: 100px;
-      // width: 100px;
-      // height: 98px;
-      width: 90px;
+        height: 100%;
+        width: 0;
 
-      // opacity: .5;
-      opacity: .75;
+        z-index: 500;
+
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+        }
+
+        svg {
+            position: absolute;
+
+            height: 90px;
+            width: 90px;
+
+            // opacity: .5;
+            opacity: .75;
+
+            &:hover {
+              opacity:1;
+            }
+        }
+
+        path {
+            fill: @orange;
+        }
+
     }
 
-    path {
-      fill: @orange;
+    .slick-prev {
+        svg {
+            left: 1rem;
+        }
     }
 
-    path:hover {
-      fill: @orange * @btn-hover;
+    .slick-next {
+        svg {
+            right: 1rem;
+        }
     }
-  }
-
-  .slick-prev {
-    svg {
-      left: 9px;
-    }
-  }
-
-  .slick-next {
-    svg {
-      right: 9px;
-    }
-  }
 }
 
 // content inside each slide
-.banner_container {  // aka .banner_inside_slide
-  position: relative;
-  display: flex;
-  margin: 0;
-  font-size: 16px;  // need font-size bc parent font-size:0
-
-  @media screen {
-    @media (max-width: 414px) {
-      // height: calc(100vh - 64px);
-      flex-direction: column;
-      // flex-wrap: wrap;
-      // justify-content: space-between;
-      // align-content: space-between;
-    }
-  }
-
-  img {
-    width: 59.25%;
+.banner_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
+    align-items: center;
 
-    @media screen {
-      @media (max-width: 414px) {
-        width: @mobile-side-paddings;
-        margin: 0 auto;
-      }
-    }
-  }
-
-  .banner_content {
-    display: inline-block;
-    width: unset;
-    padding: 11.75% 7.8% 0 3.85%;
-    margin: 0;
-    
-    padding-top: 0;
-    padding-bottom: 0;
-    align-self: center;
-    // justify-content: center;
-
-    @media screen {
-      @media (max-width: 414px) {
-        margin: 0 auto;
-        width: @mobile-side-paddings;
-        padding: 1.5em 0;
-      }
-    }
-
-    h2 {
-      color: @orange;
-      font-family: @font-headings;
-      font-size: 2.25em;
-      margin: 0 auto 15px;
-      text-transform: uppercase;
-
-      
-      @media screen {
-        @media (max-width: 1000px) and (min-width: 414px) {
-          font-size: 3.6vw;
-          // background: red;
-        }
-        @media (max-width: 414px) {
-          font-size: 1.95em;
-          margin: 0 auto 18px;
-        }
-      }
-    }
-
-    p {
-      color: white;
-      margin: 0 auto 35px;
-
-      @media screen {
-        @media (max-width: 1000px) and (min-width: 414px) {
-          font-size: 1.63vw;
-          // background: red;
-        }
-        @media (max-width: 414px) {
-           margin-bottom: 16px;
-        }
-      }
-    }
 
     a {
-      width: 99.75%;
-      height: @btn-height + 11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        flex-basis: 50%;
+
+        img {}
     }
-  }
+
+    div {
+        flex-basis: 50%;
+
+        h2 {
+            color: @orange;
+            font-family: @font-headings;
+            font-size: 2.25em;
+            margin: @margin;
+            text-transform: uppercase;
+
+        }
+
+
+        p {
+            color: #fff;
+            margin: @margin;
+            width: 65%;
+
+        }
+
+
+        a {
+            padding: 3% 5%;
+            display: inline-block;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
 }
 
 .slide2 {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 
-   @media screen {
-    @media (max-width: 414px) {
-      flex-direction: column;
-    }
-  }
 }

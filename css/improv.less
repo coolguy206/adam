@@ -5,59 +5,87 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  margin-bottom: 131px;
-  margin-bottom: 105px;
-
-  h2 {
-    width: 100%;
-
-    margin-top: 88px;
-  }
+  // h2 {
+  //   width: 100%;
+  //   margin-top: 1.5em;
+  //   margin-bottom: .5em;
+  // }
 
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: calc(50% - .65em);
-    margin-bottom: 12px;
+    margin-bottom: 2em;
 
-    * {
-      width: 60%;
-      margin: initial auto;
-    }
-    
-    h3 {
-      margin-top: 33px;
-      margin-top: 30px;
-      margin-bottom: 26px;
-    }
-    
-    img {
+    // @media only screen and (max-width: 414px) {
+    @media only screen and (max-width: 600px) {
       width: 100%;
-      margin-bottom: 36px;
+      margin-bottom: 2.25em;
     }
+    
+    // h3 {
+    //   width: 100%;
+    //   margin-bottom: .5em;
+    //   font-size: 2.35vw;
+
+    //   @media screen {
+    //     @media (min-width: @pg-max-width) {
+    //       font-size: 2.15em;
+    //     }
+    //     @media (max-width: 600px) {
+    //       white-space: unset;
+    //       font-size: 2.15em;
+    //       width: @mobile-side-paddings;
+    //     }
+    //   }
+    // }
+    
+    // img {
+    //   margin-bottom: 2em;
+    // }
 
     p {
-      margin-top: 0;
+      width: 60%;
+      margin: 0 auto 1em;
 
-      margin-bottom: 3px; // placeholder; remove
+      // @media only screen and (max-width: 414px) {
+      @media only screen and (max-width: 600px) {
+        width: @mobile-side-paddings;
+      }
     }
 
-    .improv_btns {
+    // button
+    a:nth-of-type(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 59%;
-      padding: 27.5px 0 26px;
-      padding: 25px 0 22px;
-    }
-
-    #improv_classes_btn {
+      height: @btn-height;
+      // height: 3.15em;
+      margin-bottom: .67em;
       background: @orange;
+
+      @media only screen and (max-width: 414px) {
+        width: @mobile-btn-width;
+      }
 
       &:hover {
         background: @orange * @btn-hover;
       }
     }
 
-    #improv_shows_btn {
+    // link
+    a:nth-of-type(2) {
+      text-decoration: underline;
+      color: black;
+    }
+  }
+
+  //improv subsection "shows"
+  div:nth-of-type(2) {
+    // button
+    a:nth-of-type(1) {
       background: @red;
       color: white;
 
@@ -65,13 +93,8 @@
         background: @red * @btn-hover;
       }
     }
-
-    .improv_links {
-      text-decoration: underline;
-      color: black;
-    }
-
-    #improv_shows_link {
+    // link
+    a:nth-of-type(2) {
       color: @red;
     }
   }

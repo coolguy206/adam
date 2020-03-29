@@ -10,6 +10,11 @@ header {
   box-shadow: 0 4px 6px -8px black;
   z-index: 1000;
 
+  // @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 600px) {
+    height: @nav-height-mobile;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;

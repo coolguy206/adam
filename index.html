@@ -7,8 +7,10 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:700|Montserrat&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
 
   <link href='css/less/styles.css' rel='stylesheet' />
 
@@ -43,12 +45,11 @@
       <span id='top_anchor' class='anchors'></span>
       <div class="slider banner_slick">
         <div>
-          <div class='banner_inside_slide'>
+          <div class='banner_container'>
             <img src='img/banner_img11.jpg' alt='#' />
-            <div>
-              <p class='banner_heading'>Improv Shows</p>
-              <!-- <h2>Improv Shows</h2> -->
-              <p class='banner_desc'>
+            <div class='banner_content'>
+              <h2>Improv Shows</h2>
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
                 aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
@@ -58,25 +59,25 @@
           </div>
         </div>
         <div>
-          <div class='banner_inside_slide'>
-            <div>
-              <p class='banner_heading'>Improv Shows</p>
-              <p class='banner_desc'>
+          <div class='banner_container slide2'>
+            <img src='img/banner_img12.jpg' alt='#' />
+            <div class='banner_content'>
+              <h2>Improv Shows</h2>
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
                 aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
               </p>
               <a href='#' class='link_btns bordered_btns'>Read More</a>
             </div>
-            <img src='img/banner_img12.jpg' alt='#' />
           </div>
         </div>
         <div>
-          <div class='banner_inside_slide'>
+          <div class='banner_container'>
             <img src='img/banner_img03.jpg' alt='#' />
-            <div>
-              <p class='banner_heading'>Corporate Workshop Team Building</p>
-              <p class='banner_desc'>
+            <div class='banner_content'>
+              <h2>Corporate Workshop Team Building</h2>
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
                 aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
@@ -90,7 +91,7 @@
     <section id='improv_section'>
       <span id='improv_anchor' class='anchors'></span>
       <h2>Improv</h2>
-      <div id='improv_classes'>
+      <div>
         <h3>Classes</h3>
         <img src='img/improv_img01.jpg' alt='#' />
         <p>
@@ -98,10 +99,10 @@
           magna
           aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
         </p>
-        <a class='link_btns improv_btns' id='improv_classes_btn'>Sign Up</a>
-        <a href='#' class='link_btns improv_links'>See All Classes</a>
+        <a class='link_btns'>Sign Up</a>
+        <a href='#' class='link_btns'>See All Classes</a>
       </div>
-      <div id='improv_shows'>
+      <div>
         <h3>Shows</h3>
         <img src='img/improv_img15.jpg' alt='#' />
         <p>
@@ -109,8 +110,8 @@
           magna
           aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
         </p>
-        <a class='link_btns improv_btns' id='improv_shows_btn'>Buy Tickets</a>
-        <a href='#' class='link_btns improv_links' id='improv_shows_link'>See All Shows</a>
+        <a class='link_btns'>Buy Tickets</a>
+        <a href='#' class='link_btns'>See All Shows</a>
       </div>
     </section>
     <section id='services_section'>
@@ -133,7 +134,7 @@
             aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
           </p>
         </div>
-        <a class='link_btns bordered_btns'><span>Request Quote</span></a>
+        <a class='link_btns bordered_btns'>Request Quote</a>
       </div>
 
       <div>
@@ -152,8 +153,15 @@
             magna
             aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore
+            magna
+            aliqua.
+          </p>
         </div>
-        <a class='link_btns bordered_btns'><span>Sign Up</span></a>
+        <a class='link_btns bordered_btns'>Sign Up</a>
       </div>
 
       <div>
@@ -177,7 +185,7 @@
             <li>Production Assistant</li>
           </ol>
         </div>
-        <a class='link_btns bordered_btns'><span>Contact Me</span></a>
+        <a class='link_btns bordered_btns'>Contact Me</a>
       </div>
 
       <div>
@@ -190,51 +198,59 @@
             aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
           </p>
         </div>
-        <a class='link_btns bordered_btns'><span>Contact Me</span></a>
+        <a class='link_btns bordered_btns'>Contact Me</a>
       </div>
     </section>
     <section id='gallery_section'>
       <span id='gallery_anchor' class='anchors'></span>
-
       <h2>Gallery</h2>
-
       <!-- gallery slider: videos -->
       <div class='gallery_thumbnails'>
-          <h3>Videos</h3>
-          <ul>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+        <h3>Videos</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
 
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
 
-          </ul>
-          <a class='more_media_link' href='#'>See More Videos</a>
+        </ul>
+        <a class='more_media_link' href='#'>See More Videos</a>
       </div>
       <!-- gallery slider: videos -->
       <div class='gallery_thumbnails'>
-          <h3>Photos</h3>
-          <ul>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-              <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
-            
+        <h3>Photos</h3>
+        <ul>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
 
-          </ul>
-          <a class='more_media_link' href='#'>See More Photos</a>
+
+        </ul>
+        <a class='more_media_link' href='#'>See More Photos</a>
       </div>
     </section>
     <section id='about_section'>
@@ -276,6 +292,7 @@
         <a href='tel:206-473-9211'>Phone USA: 206-473-9211</a>
         <a href='tel:+919152730446'>Phone India: +919152730446</a>
       </div>
+
       <form action='form.js' method='post'>
         <div class='form_grp'>
           <label>Name</label>
@@ -288,7 +305,8 @@
         <div class='form_grp'>
           <label>Services</label>
           <select name='services' required>
-            <option value="" selected disabled>please select an option...</option>
+            <!-- <option value="" selected disabled>please select an option...</option> -->
+            <option value="" selected disabled></option>
             <option value='corporate workshops'>Corporate Workshops Team Building</option>
             <option value='improv classes'>Improv Classes</option>
             <option value='tv film production'>TV/Film Production</option>
@@ -303,6 +321,7 @@
           <button class='link_btns'>Send</button>
         </div>
       </form>
+
     </section>
     <footer>
       <div id='footer_nav'>
@@ -325,12 +344,11 @@
         <p>copyright <span id="copyright"></span></p>
       </div>
     </footer>
-
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <!-- lity lightbox -->
+  <!-- lity lightbox -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.js"></script>
 

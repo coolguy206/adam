@@ -1,15 +1,22 @@
 @import "global.less";
 
 #contact_section {
-  padding-top: 33px;
+  padding-top: 4.125em;
+
+  h2 {
+  //   width: 100%;
+  //   margin-top: 1.5em;
+  //   margin-bottom: .5em;
+    margin-top: 0;
+  }
 }
 
 .contact_info {
-  margin-top: 11px;
-  margin-bottom: 37px;
+  margin-top: 1em;
+  margin-bottom: 2.3em;
 
   a, p {
-    font-size: 1em;
+    // font-size: 1em;
     font-family: @font-paragraphs;
     text-transform: initial;
     display: block;
@@ -26,21 +33,33 @@ form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 auto 2em;
+
+  // @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 2.25em;
+    flex-direction: column;
+    width: @mobile-side-paddings;
+  }
 
   .form_grp {
     width: calc(50% - .65em);
-    margin: 0;
-    margin-bottom: 37px;
+    margin-bottom: 2.35em;
+
+    // @media only screen and (max-width: 414px) {
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   .form_grp:last-child {
     margin-left: auto;
+    margin-bottom: 0;
   }
 
   .form_grp_txtarea {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 2.35em;
   }
 
   label {
@@ -50,28 +69,43 @@ form {
     text-align: left;
     font-size: 1.5em;
     width: 100%;
-    margin-bottom: 22px;
-
+    margin-bottom: .9em;
   }
 
   input, select, textarea {
-    height: 85px;
-    width: 100%;
-    padding: 15px;
     text-align: left;
     font-size: 1.5em;
+    height: 3.545em;
+    width: 100%;
+    padding: .5em;
   }
 
+// to do issue: "option's" width goes beyond small screen
+  // select {
+    // option {
+      // can only style color and bg-color
+    // }
+  // }
+
   textarea {
-    height: 265px;
-    margin-bottom: 10px;
+    height: 11em;
   }
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: @red;
     width: 74.25%;
+    // height: 3.15em;
+    height: @btn-height;
     margin-right: 0 !important;
+
+    // @media only screen and (max-width: 414px) {
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
 
     &:hover {
       background: @red * @btn-hover;

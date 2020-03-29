@@ -64,12 +64,7 @@
 }
 
 @media only screen and (max-width: 414px) {
-  .link_btns {
-    width: 100%;
-  }
-
   .banner_slick {
-   
     // buttons
     .slick-prev, .slick-next {
       svg {
@@ -91,124 +86,10 @@
     }
   }
 
-  .banner_inside_slide {
-    flex-direction: column;
-
-    img {
-      width: @mobile-side-paddings;
-      margin: 0 auto;
-    }
-
-    div {
-      margin: 0 auto;
-      width: @mobile-side-paddings;
-      padding: 0;
-      padding-top: 1.5em;
-
-      .banner_heading {
-        font-size: 1.95em;
-        margin: 0 auto 18px;
-      }
-
-      .banner_desc {
-        margin-bottom: 16px;
-      }
-
-      a {
-        width: 100%;
-        padding-top: 18px;
-        padding-bottom: 20px;
-      }
-    }
-  }
-
-  #improv_section {
-    flex-direction: column;
-
-    div {
-      width: 100%;
-
-      * {
-        width: @mobile-side-paddings;
-        margin: 0 auto;
-      }
-
-      .improv_btns {
-        width: @mobile-btn-width;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
   #gallery_section {
     h3, .more_media_link {
       margin: 0 auto;
       text-align: center;
     }
-  }
-
-  #about_section {
-    flex-direction: column;
-    flex-wrap: unset;
-    margin: 0 auto;
-
-    div {
-      width: 100%;
-    }
-
-    div h3, img, p {
-      width: @mobile-side-paddings;
-      margin: 0 auto;
-      
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  form {
-    flex-direction: column;
-
-    width: @mobile-side-paddings;
-
-    .form_grp {
-      width: 100%;
-
-      // how to display ellipsis on text overflow?
-      select {
-        width: 100%;
-
-        // white-space: nowrap;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-        // font-size: 1em;
-        
-        option {
-          font-size: 1em;
-          padding: 0;
-          margin: 0;
-
-          // white-space: nowrap;
-          // overflow: hidden;
-          // text-overflow: ellipsis;
-        }
-      }
-
-      button {
-        width: 100%;
-      }
-    }
-  }
-
-  footer {
-    width: @mobile-side-paddings;
-    margin: 0 auto;
-  }
-
-  #footer_nav, #footer_socialmedia {
-    width: 100%;
   }
 }

@@ -4,31 +4,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   background-color: @lightblue;
   color: white;
-  padding-top: 58px;
-  padding-bottom: 34px;
 
-  h2 {
-    width: 100%;
-  }
+  // h2 {
+  //   width: 100%;
+  //   margin-top: 1.5em;
+  //   margin-bottom: .5em;
+  // }
 
   div {
-    width: calc(50% - .65em);
-    margin-left: 0;
-    margin-right: 0;
-
-    margin-bottom: 1.5%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: calc(50% - .65em);
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
 
     @media screen {
       @media (max-width: 600px) {
         width: 100%;
-        margin-bottom: 4%;
+        margin-bottom: 2.25em;
       }
     }
 
@@ -41,57 +38,51 @@
       color: @orange;
     }
 
-    h3 {
-      margin-top: 30px;
-      margin-bottom: 24px;
+    // h3 {
+    //   width: 100%;
+    //   white-space: nowrap;
+    //   margin-bottom: .5em;
+    //   font-size: 2.35vw;
 
-      width: 100%;
+    //   @media screen {
+    //     @media (min-width: @pg-max-width) {
+    //       font-size: 2.15em;
+    //     }
+    //     @media (max-width: 600px) {
+    //       white-space: unset;
+    //       font-size: 2.15em;
+    //     }
+    //   }
+    // }
 
-      font-size: 2.35vw;
-      white-space: nowrap;
-
-      @media screen {
-        @media (min-width: @pg-max-width) {
-          font-size: 2.15em;
-        }
-        @media (max-width: 600px) {
-          white-space: unset;
-          font-size: 2.15em;
-        }
-      }
-    }
+    // img {
+    //   margin-bottom: 2em;
+    // }
 
     h4 {
-      margin-bottom: 15px;
-    }
-
-    img {
-      margin-bottom: 32px;
+      margin-bottom: .65em;
     }
 
     p {
-      margin: 0 auto 15px;
+      width: @mobile-side-paddings;
+      margin: 0 auto 1em;
     }
 
     a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 59%;
-      height: 76px;
-      padding: 0;
-      margin: 0 auto;
+      // height: 3.15em;
+      height: @btn-height;
 
       @media screen {
         @media (max-width: 800px) and (min-width: 600px) {
           font-size: 3vw;
         }
-        @media (max-width: 600px) {
-          width: calc(100% - 1em);
+        @media (max-width: 414px) {
+          width: @mobile-btn-width;
         }
-      }
-
-      span {
-        line-height: 76px;
-        display: inline-block;
-        vertical-align: middle;
       }
     }
 
@@ -100,7 +91,7 @@
       white-space: nowrap;
       padding: 0;
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: .9em;
     }
 
     li {

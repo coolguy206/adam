@@ -1,11 +1,16 @@
 @import "global.less";
 
 footer {
-  margin-bottom: 0;
-  padding-bottom: 30px;
-
+  margin: 6em auto 0;
+  padding-bottom: 2em;
   font-size: 1em;
 
+  @media screen {
+    @media (max-width: 600px) {
+      width: @mobile-side-paddings;
+    }
+  }
+ 
   .contact_info {
     margin-bottom: 0;
   }
@@ -14,20 +19,45 @@ footer {
 #footer_nav, #footer_socialmedia {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 72px;
-  padding: 0;
+  margin: 0 auto;
   width: 45%;
 }
 
 #footer_nav {
+  flex-wrap: wrap;
+  line-height: 3em;
+  margin-bottom: 1.5em;
+
+  a {
+    padding-right: .5em;
+  }
+
+  a:last-child {
+    padding-right: 0;
+  }
+
   a:hover {
     text-decoration: underline;
+  }
+
+  @media screen {
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 1em;
+    }
   }
 }
 
 #footer_socialmedia {
   width: 32.5%;
-  margin-bottom: 65px;
+  margin-bottom: 2em;
+
+  @media screen {
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-bottom: .5em;
+    }
+  }
 }
 
 i {

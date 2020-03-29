@@ -1,9 +1,9 @@
 @font-headings: 'Raleway';
 @font-paragraphs: 'Montserrat';
 @pg-max-width: 1440px;
-// @nav-height: 8.1em;
 @nav-height: 7.65em;
-@banner-slider-height: 733px;
+@nav-height-mobile: 4em;
+@btn-height: 3.15em;
 @mobile-side-paddings: calc(100% - 1.5em);
 @mobile-btn-width: calc(100% - 1em);
 @orange: rgb(255, 207, 81);
@@ -23,8 +23,6 @@ body, html {
   margin: 0 auto;
   padding: 0;
   font-size: 100%;
-  // background: rgb(82,159,181);
-  // background: linear-gradient(180deg, @lightblue 0%, white 25%, white 50%, white 75%, @lightblue 100%);
   background: black;
 }
 
@@ -41,16 +39,16 @@ h2, h3, h4, h5, h6, button, a, span {
   margin: 0 auto;
 }
 
-h2 {
-  font-size: 3em;
-  font-size: 2.75em
-}
+// h2 {
+//   font-size: 3em;
+//   font-size: 2.75em;
+// }
 
-h3 {
-  font-size: 2.25em;
-  font-size: 2.15em;
-  margin-bottom: 24px;
-}
+// h3 {
+  // font-size: 2.25em;
+  // font-size: 2.15em;
+  // margin-bottom: 24px;
+// }
 
 h4 {
   font-size: 1.5em;
@@ -60,11 +58,10 @@ p, input, select, textarea {
   font-size: 1em;
 }
 
-img {
-  margin-bottom: 18px;
-
-  max-width: 100%;
-}
+// img {
+  // margin-bottom: 2em;
+  // max-width: 100%;
+// }
 
 a {
   text-decoration: none;
@@ -74,8 +71,13 @@ a {
 .link_btns {
   display: block;
   margin: 0 auto;
-  padding: 28px 0;
   font-size: 1.5em;
+
+  @media screen {
+    @media (max-width: 414px) {
+      width: 100%;
+    }
+  }
 }
 
 .bordered_btns {
@@ -93,5 +95,11 @@ section {
 
 section .anchors {
   position: absolute;
-  top: -@nav-height ;
+  top: -@nav-height + .4em;
+  // 7.65
+// 7.25
+  // @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 600px) {
+    top: -@nav-height-mobile + .4em;
+  }
 }

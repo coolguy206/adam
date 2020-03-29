@@ -8,7 +8,7 @@
     font-size: 0;
   }
 
-  // buttons
+  // slider buttons
   .slick-prev, .slick-next {
     position: absolute;
     display: block;
@@ -27,15 +27,15 @@
 
     svg {
       position: absolute;
-      top: 44%;
+      // top: 44%;
       top: 42.8%;
 
       height: 100px;
-      width: 100px;
+      // width: 100px;
       // height: 98px;
       width: 90px;
 
-      opacity: .5;
+      // opacity: .5;
       opacity: .75;
     }
 
@@ -61,45 +61,106 @@
   }
 }
 
-.banner_inside_slide {
-  display: flex;
+// content inside each slide
+.banner_container {  // aka .banner_inside_slide
   position: relative;
+  display: flex;
   margin: 0;
   font-size: 16px;  // need font-size bc parent font-size:0
 
-  img {
-    width: 59.25%;
-    // width: 60%;
-    margin: 0;
+  @media screen {
+    @media (max-width: 414px) {
+      // height: calc(100vh - 64px);
+      flex-direction: column;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      // align-content: space-between;
+    }
   }
 
-  div {
+  img {
+    width: 59.25%;
+    margin: 0;
+
+    @media screen {
+      @media (max-width: 414px) {
+        width: @mobile-side-paddings;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .banner_content {
     display: inline-block;
-    width: 40.75%;
     width: unset;
-    padding: 14.15% 7.7% 0 3.9%;
     padding: 11.75% 7.8% 0 3.85%;
     margin: 0;
     
-    .banner_heading {
+    padding-top: 0;
+    padding-bottom: 0;
+    align-self: center;
+    // justify-content: center;
+
+    @media screen {
+      @media (max-width: 414px) {
+        margin: 0 auto;
+        width: @mobile-side-paddings;
+        padding: 1.5em 0;
+      }
+    }
+
+    h2 {
       color: @orange;
       font-family: @font-headings;
       font-size: 2.25em;
       margin: 0 auto 15px;
       text-transform: uppercase;
+
+      
+      @media screen {
+        @media (max-width: 1000px) and (min-width: 414px) {
+          font-size: 3.6vw;
+          // background: red;
+        }
+        @media (max-width: 414px) {
+          font-size: 1.95em;
+          margin: 0 auto 18px;
+        }
+      }
     }
 
-    .banner_desc {
+    p {
       color: white;
       margin: 0 auto 35px;
+
+      @media screen {
+        @media (max-width: 1000px) and (min-width: 414px) {
+          font-size: 1.63vw;
+          // background: red;
+        }
+        @media (max-width: 414px) {
+           margin-bottom: 16px;
+        }
+      }
     }
 
     a {
       width: 99.75%;
-      padding-top: 27px;
-      padding-bottom: 25px;
-      padding-top: 25px;
-      padding-bottom: 22px;
+      height: @btn-height + 11px;
+      height: @btn-height;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.slide2 {
+  flex-direction: row-reverse;
+
+   @media screen {
+    @media (max-width: 414px) {
+      flex-direction: column;
     }
   }
 }

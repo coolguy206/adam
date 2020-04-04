@@ -27,7 +27,8 @@ $(document).ready(function() {
       </button>`
     });
 
-    $('.gallery_responsive').slick({
+
+    /*$('.gallery_responsive').slick({
         dots: false,
         infinite: true,
         speed: 300,
@@ -73,14 +74,29 @@ $(document).ready(function() {
                 }
             }
         ]
-    });
-});
-// #endregion
+    });*/
 
-$('.gallery_thumbnails ul').slick({
-    slidesPerRow: 5,
-    arrows: true,
-    prevArrow: `<button type='button' class='slick-prev pull-left'>
+    // #endregion
+
+    $('.gallery_thumbnails ul').slick({
+        slidesToShow: 5,
+        arrows: true,
+        dots: true,
+        responsive: [
+        {
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 415,
+            settings: {
+                slidesToShow: 1,
+            }
+        }, 
+        ],
+        prevArrow: `<button type='button' class='slick-prev pull-left'>
         <svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 501.5 501.5'>
           <g>
             <path fill='red'
@@ -88,7 +104,7 @@ $('.gallery_thumbnails ul').slick({
           </g>
         </svg>
       </button>`,
-    nextArrow: `<button type='button' class='slick-next pull-right'>
+        nextArrow: `<button type='button' class='slick-next pull-right'>
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5">
           <g>
             <path fill="red"
@@ -97,43 +113,45 @@ $('.gallery_thumbnails ul').slick({
         </svg>
       </button>`
 
+    });
+
+    //lity lightbox
+    $(document).on('click', '[data-lightbox]', lity);
+
+
+
+    // #region hamburger menu
+    function toggleHamburger() {
+        var div = $('#nav_id div');
+        // console.log(div);
+        if (div[0].className == "active") {
+            div[0].className = "";
+        } else {
+            div[0].className = "active";
+        }
+    }
+    // #endregion
+
+    // #region navbar sticky
+    // sticky the horizontal navbar to the top after scroll to its div
+    // window.onscroll = function() { fixedToTop() };
+
+    const navLinks = document.getElementById("header");
+    // let navLinksSticky = navLinks.offsetTop;
+
+    // navbar sticks to top on scroll
+    function fixedToTop() {
+        if (window.pageYOffset > 1) {
+            navLinks.classList.add("header_sticky");
+        } else {
+            navLinks.classList.remove("header_sticky");
+        }
+    }
+    // #endregion
+
+    // #region get current year
+    let date = new Date();
+    document.getElementById("copyright").textContent = date.getFullYear();
+    // #endregion
+
 });
-
-//lity lightbox
-$(document).on('click', '[data-lightbox]', lity);
-
-
-
-// #region hamburger menu
-function toggleHamburger() {
-    var div = $('#nav_id div');
-    // console.log(div);
-    if (div[0].className == "active") {
-        div[0].className = "";
-    } else {
-        div[0].className = "active";
-    }
-}
-// #endregion
-
-// #region navbar sticky
-// sticky the horizontal navbar to the top after scroll to its div
-// window.onscroll = function() { fixedToTop() };
-
-const navLinks = document.getElementById("header");
-// let navLinksSticky = navLinks.offsetTop;
-
-// navbar sticks to top on scroll
-function fixedToTop() {
-    if (window.pageYOffset > 1) {
-        navLinks.classList.add("header_sticky");
-    } else {
-        navLinks.classList.remove("header_sticky");
-    }
-}
-// #endregion
-
-// #region get current year
-let date = new Date();
-document.getElementById("copyright").textContent = date.getFullYear();
-// #endregion

@@ -1,35 +1,47 @@
 @import "global.less";
 
 #about_section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: @lightblue;
-  color: white;
-  padding-top: 46px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: @lightblue;
+    color: white;
+    padding: 4% 0;
 
-  h2 {
-    width: 100%;
-    margin-bottom: 39px;
-  }
-
-  div {
-    width: 29%;
-    margin-left: 0;
-    margin-right: 0;
-
-    h3 {
-      color: @orange;
-      margin-bottom: 24px;
+    h2 {
+        width: 100%;
+        margin: 0 0 2%;
     }
 
-    p {
-      margin-bottom: 41px;
-    }
+    div {
+        @media screen and (max-width: 768px) {
+            width: 48%;
+            padding: 0 0 2%;
+        }
+        @media screen and (max-width: 414px){
+          width: 100%;
+        }
 
-    img {
-      width: 100%;
-      margin-bottom: 19px;
+        width: 32%;
+
+        h3,
+        p,
+        img {
+            margin: @margin;
+        }
+
+        h3 {
+            color: @orange;
+
+        }
+
+        p {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+
+        }
     }
-  }
 }

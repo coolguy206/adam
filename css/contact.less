@@ -22,9 +22,10 @@
 }
 
 form {
-    @media screen and (max-width: 414px){
-        margin:10% auto 0;
+    @media screen and (max-width: 414px) {
+        margin: 10% auto 0;
     }
+
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -33,10 +34,11 @@ form {
 
     .form_grp,
     .form_grp_txtarea {
-      @media screen and (max-width: 414px){
-        margin: 0 0 10%;
-      }
-      margin: 0 0 5%;
+        @media screen and (max-width: 414px) {
+            margin: 0 0 10%;
+        }
+
+        margin: 0 0 5%;
     }
 
     .form_grp {
@@ -77,6 +79,8 @@ form {
         text-align: left;
         font-size: 1.5em;
         border: none;
+        -webkit-appearance: none;
+        border-radius:0;
     }
 
     textarea {
@@ -84,9 +88,10 @@ form {
     }
 
     button {
-      @media screen and (max-width: 414px){
-        padding: 2% 0;
-      }
+        @media screen and (max-width: 414px) {
+            padding: 2% 0;
+        }
+
         border: none;
         background-color: @red;
         padding: 1% 2%;

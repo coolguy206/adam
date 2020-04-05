@@ -1,13 +1,21 @@
 @import "global.less";
 
 footer {
+
   @media screen and (max-width: 414px){
     padding: 4% 0;
   }
   margin:0;
   padding: 0 0 4%;
+
   font-size: 1em;
 
+  @media screen {
+    @media (max-width: 600px) {
+      width: @mobile-side-paddings;
+    }
+  }
+ 
   .contact_info {
     margin:0;
   }
@@ -19,21 +27,33 @@ footer {
   }
   display: flex;
   justify-content: space-between;
+
   margin: 0 auto 3%;
   padding: 0;
+
   width: 45%;
 }
 
 #footer_nav {
+
   @media screen and (max-width: 414px){
     display:none;
   }
+
   a:hover {
     text-decoration: underline;
+  }
+
+  @media screen {
+    @media (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 1em;
+    }
   }
 }
 
 #footer_socialmedia {
+
   @media screen and (max-width: 768px){
     width: 40%;
   }
@@ -41,6 +61,7 @@ footer {
     width: 60%;
   }
   width: 32%;
+
 }
 
 i {

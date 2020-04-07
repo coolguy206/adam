@@ -1,24 +1,25 @@
 export function gallery() {
-    $('.gallery_thumbnails ul').slick({
-        slidesToShow: 5,
-        arrows: true,
-        autoplay: true,
-        infinite: true,
-        dots: true,
-        responsive: [{
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 415,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-        ],
-        prevArrow: `<button type='button' class='slick-prev pull-left'>
+  // $('.gallery_thumbnails ul').slick({
+  $('.gallery_thumbnails ul').slick({
+    slidesToShow: 5,
+    arrows: true,
+    autoplay: true,
+    infinite: true,
+    dots: true,
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 415,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    ],
+    prevArrow: `<button type='button' class='slick-prev pull-left'>
         <svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 501.5 501.5'>
           <g>
             <path fill='red'
@@ -26,7 +27,7 @@ export function gallery() {
           </g>
         </svg>
       </button>`,
-        nextArrow: `<button type='button' class='slick-next pull-right'>
+    nextArrow: `<button type='button' class='slick-next pull-right'>
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5">
           <g>
             <path fill="red"
@@ -35,5 +36,5 @@ export function gallery() {
         </svg>
       </button>`
 
-    });
+  });
 };

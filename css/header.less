@@ -1,6 +1,9 @@
 @import "global.less";
 
 header {
+    @media screen and (max-width: 768px) {
+        padding: 1% 0;
+    }
 
     position: sticky;
     position: -webkit-sticky;
@@ -11,32 +14,35 @@ header {
     box-shadow: 0 4px 6px -8px black;
     z-index: 1000;
 
-    @media screen and (max-width: 768px) {
-        padding: 1% 0;
-
-    }
-
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         a {
-            text-decoration: none;
-            text-transform: uppercase;
-
-            &:hover {
-                text-decoration: underline;
-            }
-
             @media screen and (max-width: 768px) {
                 font-size: 2.25em;
-                // margin: @margin;
                 display: block;
                 flex-basis: 100%;
             }
+            &:hover {
+                text-decoration: underline;
+            }
+            
+            text-decoration: none;
+            text-transform: uppercase;
 
             &#brand {
+                @media screen and (max-width: 768px) {
+                    padding: 0;
+                    flex-basis: 90%;
+                    font-size: 2.5em;
+                    text-align: center;
+                }
+                @media screen and (max-width: 414px) {
+                    flex-basis: 80%;
+                }
+                
                 margin: 0;
                 padding: 0 0 0 2.8%;
                 text-align: left;
@@ -48,27 +54,14 @@ header {
                 &:hover {
                     text-decoration: none;
                 }
-
-                @media screen and (max-width: 768px) {
-                    padding: 0;
-                    flex-basis: 90%;
-                    font-size: 2.5em;
-                    text-align: center;
-                }
-
-                @media screen and (max-width: 414px) {
-                    flex-basis: 80%;
-                }
             }
 
             &#hamburger_close,
             &#hamburger_icon {
                 display: none;
-
                 i {
                     color: #000;
                 }
-
             }
 
             &#hamburger_icon {
@@ -90,18 +83,10 @@ header {
             &#hamburger_close {
                 text-align: right;
                 padding: 0 5% 0 0;
-
             }
-
         }
 
         div {
-            display: inline-flex;
-            justify-content: space-around;
-            margin: 0;
-            font-size: 1em;
-            flex-basis: 50%;
-
             @media screen and (max-width: 768px) {
                 display: none;
                 top: 0;
@@ -123,7 +108,11 @@ header {
                 }
             }
 
+            display: inline-flex;
+            justify-content: space-around;
+            margin: 0;
+            font-size: 1em;
+            flex-basis: 50%;
         }
-
     }
 }

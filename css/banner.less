@@ -4,18 +4,12 @@
     background: black;
     overflow: hidden;
 
-    .slick-slide {
-        // font-size: 0;
-    }
-
-
     // slider buttons
     .slick-prev,
     .slick-next {
         position: absolute;
         display: block;
         cursor: pointer;
-
 
         height: 100%;
         width: 0;
@@ -28,28 +22,25 @@
             height: 0;
         }
 
-
         svg {
-            position: absolute;
-            height: 90px;
-            width: 90px;
-            opacity: .75;
+          @media screen and (max-width: 768px) {
+              width: 70px;
+              height: 70px;
+          }
 
-            @media screen and (max-width: 768px) {
-                width: 70px;
-                height: 70px;
-            }
+          &:hover {
+              opacity: 1;
+          }
 
-            &:hover {
-                opacity: 1;
-            }
+          position: absolute;
+          height: 90px;
+          width: 90px;
+          opacity: .75;
         }
-
 
         path {
             fill: @orange;
         }
-
     }
 
     .slick-prev {
@@ -65,8 +56,6 @@
     }
 }
 
-// content inside each slide
-
 .banner_container {
     position: relative;
     display: flex;
@@ -77,76 +66,61 @@
 
     a,
     div {
-        flex-basis: 50%;
-
         @media screen and (max-width: 414px) {
             flex-basis: 100%;
         }
 
-    }
-
-
-    a {
-
-
-        img {}
+        flex-basis: 50%;
     }
 
     div {
-
         @media screen and (max-width: 414px) {
             margin: 5% 0 0;
             padding: 0 0 10%;
         }
 
         h2 {
+            @media screen and (max-width: 768px) {
+                font-size: 1.5em;
+            }
+
             color: @orange;
             font-family: @font-headings;
             font-size: 2.25em;
             margin: @margin;
             text-transform: uppercase;
-
-            @media screen and (max-width: 768px) {
-                font-size: 1.5em;
-            }
-
         }
 
-
         p {
-            color: #fff;
-            margin: @margin;
-            width: 65%;
-
             @media screen and (max-width: 768px) {
                 font-size: .9em;
             }
 
+            color: #fff;
+            margin: @margin;
+            width: 65%;
         }
-
 
         a {
+            @media screen and (max-width: 768px) {
+              font-size: 1em;
+              padding: 2% 5%;
+            }
+            
+            @media screen and (max-width: 414px){
+              width: auto;
+            }
+            
+            &:hover {
+              color: #000;
+            }
+
             padding: @padding;
             display: inline-block;
-
-            @media screen and (max-width: 768px) {
-                font-size: 1em;
-                padding: 2% 5%;
-            }
-
-            @media screen and (max-width: 414px){
-                width: auto;
-            }
-
-            &:hover {
-                color: #000;
-            }
         }
-
     }
 }
 
 .slide2 {
     flex-direction: row-reverse;
-
 }

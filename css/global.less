@@ -2,18 +2,10 @@
 @font-paragraphs: 'Montserrat';
 @pg-max-width: 1440px;
 @nav-height: 7.65em;
-
-@banner-slider-height: 733px;
-@btn-height: 76px;
-
-@mobile-side-paddings: calc(100% - 1.5em);
-@mobile-btn-width: calc(100% - 1em);
 @orange: rgb(255, 207, 81);
 @red: rgb(232, 52, 58);
 @lightblue: rgb(85, 97, 123);
-@darkblue: rgb(33, 58, 95);
 @btn-hover: 1.25;
-@bordered-btn-hover: rgba(255, 255, 255, .15);
 @margin: 0 auto 5%;
 @padding: 3% 5%;
 
@@ -23,23 +15,18 @@
     text-align: center;
 }
 
-
 body,
 html {
     margin: 0 auto;
     padding: 0;
     font-size: 100%;
     line-height:150%;
-    // background: rgb(82,159,181);
-    // background: linear-gradient(180deg, @lightblue 0%, white 25%, white 50%, white 75%, @lightblue 100%);
     background: #000;
-
 }
 
 .wrapper {
     max-width: @pg-max-width;
     margin: 0 auto;
-
     background: linear-gradient(180deg, @lightblue 0%, white 25%, white 50%, white 75%, @lightblue 100%);
 }
 
@@ -60,17 +47,13 @@ h2, h3, h4 {
   line-height: 150%;
 }
 
-
 h2 {
-    // font-size: 3em;
     font-size: 2.75em
 }
 
 h3 {
-    // font-size: 2.25em;
     font-size: 2.15em;
 }
-
 
 h4 {
     font-size: 1.5em;
@@ -83,12 +66,10 @@ textarea {
     font-size: 1em;
 }
 
-
 img, iframe {
     align-self: center;
     max-width: 100%;
 }
-
 
 a {
     text-decoration: none;
@@ -96,17 +77,15 @@ a {
 }
 
 .link_btns {
-
-    display: inline-block;
-    margin: 0 auto;
-    font-size: 1.5em;
-
     @media screen {
         @media (max-width: 414px) {
             width: 100%;
         }
     }
 
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 1.5em;
 }
 
 .bordered_btns {
@@ -126,8 +105,6 @@ section {
 }
 
 section .anchors {
-
     position: absolute;
-    top: -@nav-height ;
-
+    top: -@nav-height;
 }

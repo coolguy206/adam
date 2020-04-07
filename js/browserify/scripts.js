@@ -43,6 +43,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.gallery = gallery;
 
 function gallery() {
+  // $('.gallery_thumbnails ul').slick({
   $('.gallery_thumbnails ul').slick({
     slidesToShow: 5,
     arrows: true,

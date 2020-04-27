@@ -1,0 +1,108 @@
+@import "global.less";
+
+#improv_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 4%;
+
+
+    h2 {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(50% - .65em);
+        margin: 0;
+
+        @media screen and (max-width: 414px) {
+            width: 100%;
+            margin: @margin;
+        }
+
+        &#improv_classes {
+            @media screen and (max-width: 414px) {
+                order: 2;
+            }
+        }
+
+        * {
+            width: 60%;
+            margin: initial auto;
+        }
+
+        &>a {
+            width: 100%;
+        }
+
+        h3 {
+            margin: @margin;
+        }
+
+        img {
+            width: 100%;
+            margin: @margin;
+        }
+
+        p {
+            margin: @margin;
+
+            @media screen and (max-width: 768px) {
+                width: 85%;
+            }
+        }
+
+        .improv_btns {
+            width: auto;
+            padding: @padding;
+            margin: @margin;
+            align-self: center;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+            }
+            @media screen and (max-width: 414px){
+                width: 40%;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        #improv_classes_btn {
+            background: @orange;
+
+            &:hover {
+                background: @orange * @btn-hover;
+            }
+        }
+
+        #improv_shows_btn {
+            background: @red;
+            color: white;
+
+            &:hover {
+                background: @red * @btn-hover;
+            }
+        }
+
+        .improv_links {
+            text-decoration: underline;
+            color: black;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+            }
+        }
+
+        #improv_shows_link {
+            color: @red;
+        }
+
+    }
+}

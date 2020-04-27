@@ -1,0 +1,37 @@
+<section id='contact_section'>
+  <span id='contact_anchor' class='anchors'></span>
+  <h2>Contact</h2>
+  <div class='contact_info'>
+    include "contact_info.html"
+  </div>
+
+  <form action='form.js' method='post'>
+    <div class='form_grp'>
+      <label>Name</label>
+      <input type="text" name="name" required />
+    </div>
+    <div class='form_grp'>
+      <label>Email</label>
+      <input type="text" name="email" required />
+    </div>
+    <div class='form_grp'>
+      <label>Services</label>
+      <select name='services' required>
+        <option value="" selected disabled>please select an option...</option>
+        <!-- <option value="" selected disabled></option> -->
+        <option value='corporate workshops'>Corporate Workshops Team Building</option>
+        <option value='improv classes'>Improv Classes</option>
+        <option value='tv film production'>TV/Film Production</option>
+        <option value='acting'>Acting</option>
+      </select>
+    </div>
+    <div class='form_grp_txtarea'>
+      <label>Message</label>
+      <textarea type='text' name='message' required></textarea>
+    </div>
+    <div class='form_grp'>
+      <button class='link_btns'>Send</button>
+    </div>
+  </form>
+
+</section>

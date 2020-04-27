@@ -1,0 +1,123 @@
+@import "global.less";
+
+#services_section {
+
+    background-color: @lightblue;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    color: #fff;
+    padding: 0;
+
+    @media screen and (max-width: 414px){
+      padding: 0 0 5%;
+
+    }
+
+    h2 {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+
+    div {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(50% - .65em);
+        margin: 0 0 5%;
+
+
+        @media screen and (max-width: 414px) {
+            width: 100%;
+            margin: @margin;
+            padding: 0 0 4%;
+        }
+
+
+        div {
+            width: 100%;
+            margin: 0;
+
+            &>a {
+                width: 100%;
+                padding: 0;
+                margin: @margin;
+            }
+        }
+
+        h3,
+        h4 {
+            color: @orange;
+            margin: @margin;
+        }
+
+        h3 {
+            margin: @margin;
+            width: 100%;
+
+            @media screen and (max-width: 768px) {
+                font-size: 2em;
+                line-height: 110%;
+            }
+
+            br {
+                display: none;
+
+                @media screen and (max-width: 414px) {
+                    display: block;
+                }
+            }
+
+        }
+
+        h4 {}
+
+        img {}
+
+
+        p {
+            margin: @margin;
+            width: 60%;
+
+            @media screen and (max-width: 768px) {
+                width: 85%;
+            }
+        }
+
+
+        a {
+            width: auto;
+            padding: @padding;
+            align-self: center;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1em;
+            }
+
+            @media screen and (max-width: 414px){
+                width: 50%;
+            }
+
+        }
+
+        ol {
+            list-style-position: inside;
+            white-space: nowrap;
+            padding: 0;
+            margin: @margin;
+
+            li {
+                text-transform: uppercase;
+                width: 100%;
+                font-size: 1em;
+            }
+        }
+
+
+
+    }
+}

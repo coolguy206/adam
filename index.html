@@ -1,12 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Dow</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700|Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+
+  <link href='css/less/styles.css' rel='stylesheet' />
+
 </head>
-
 <body>
-</body>
+  <div class='wrapper'>
+    <!-- <img src="img/bg.jpg"
+      style="position: absolute;z-index: 9999;opacity: .25;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
 
+    <!-- <img src="img/bg_mobile.jpg"
+      style="position: absolute;z-index: 9999;opacity: .15;max-width: 100%;display: block;top: 0;pointer-events: none;"> -->
+
+    <header id='header'>
+        <nav id="nav_id" class='nav'>
+            <a href="#" id="hamburger_icon">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href='#top_anchor' id='brand'>Adam Dow</a>
+            <div>
+                <a href="#" id="hamburger_close">
+                    <i class="far fa-times-circle fa-lg"></i>
+                </a>
+                <a href='#improv_anchor'>Improv</a>
+                <a href='#services_anchor'>Services</a>
+                <a href='#gallery_anchor'>Gallery</a>
+                <a href='#about_anchor'>About</a>
+                <a href='#contact_anchor'>Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+
+        <span id='top_anchor' class='anchors'></span>
+        <div class="slider banner_slick">
+            <div>
+                <div class='banner_container'>
+                    <a href="#">
+                        <img src='img/banner_img11.jpg' alt='#' />
+                    </a>
+                    <div>
+                        <h2>Improv Shows</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
+                        </p>
+                        <a href='#' class='link_btns bordered_btns'>Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class='banner_container slide2'>
+                    <a href="#">
+                        <img src='img/banner_img12.jpg' alt='#' />
+                    </a>
+                    <div>
+                        <h2>Improv Classes</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
+                        </p>
+                        <a href='#' class='link_btns bordered_btns'>Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class='banner_container'>
+                    <a href="#">
+                        <img src='img/banner_img03.jpg' alt='#' />
+                    </a>
+                    <div>
+                        <h2>Corporate Workshop<br> Team Building</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna
+                            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
+                        </p>
+                        <a href='#' class='link_btns bordered_btns'>Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id='improv_section'>
+
+        <span id='improv_anchor' class='anchors'></span>
+        <h2>Improv</h2>
+        <div id='improv_classes'>
+            <a href="#">
+                <img src='img/improv_img01.jpg' alt='#' />
+            </a>
+            <h3>Classes</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna
+                aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+            </p>
+            <a class='link_btns improv_btns' id='improv_classes_btn'>Sign Up</a>
+            <a href='#' class='link_btns improv_links'>See All Classes</a>
+        </div>
+        <div id='improv_shows'>
+            <a href="#">
+                <img src='img/improv_img15.jpg' alt='#' />
+            </a>
+            <h3>Shows</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna
+                aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+            </p>
+            <a class='link_btns improv_btns' id='improv_shows_btn'>Buy Tickets</a>
+            <a href='#' class='link_btns improv_links' id='improv_shows_link'>See All Shows</a>
+        </div>
+
+    </section>
+    <section id='services_section'>
+        <span id='services_anchor' class='anchors'></span>
+        <h2>Services</h2>
+        <div>
+            <div>
+                <a href="#"><img src='img/services_img15.jpg' alt='#' /></a>
+                <h3>Corporate Workshop<br> Team Building</h3>
+                <h4>How It Works</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+                <h4>Outcome</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+            </div>
+            <a class='link_btns bordered_btns'>request Quote</a>
+        </div>
+
+        <div>
+            <div>
+                <a href="#"><img src='img/services_img15.jpg' alt='#' /></a>
+                <h3>Improv Classes</h3>
+                <h4>How It Works</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+                <h4>Outcome</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+            </div>
+            <a class='link_btns bordered_btns'>Sign Up</a>
+        </div>
+
+        <div>
+            <div>
+                <a href="#"><img src='img/services_img15.jpg' alt='#' /></a>
+                <h3>TV/Film Production</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+                <ol>
+                    <li>Directing</li>
+                    <li>Editing</li>
+                    <li>Lighting</li>
+                    <li>Production Assistant</li>
+                </ol>
+            </div>
+            <a class='link_btns bordered_btns'>Contact Me</a>
+        </div>
+
+        <div>
+            <div>
+                <a href="#"><img src='img/services_img15.jpg' alt='#' /></a>
+                <h3>Acting</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo maecenas accumsan lacus.
+                </p>
+            </div>
+            <a class='link_btns bordered_btns'>Contact Me</a>
+        </div>
+
+    </section>
+    <section id='gallery_section'>
+      <span id='gallery_anchor' class='anchors'></span>
+      <h2>Gallery</h2>
+      <!-- gallery slider: videos -->
+      <div class='gallery_thumbnails'>
+        <h3>Videos</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=ajHYExlitRc" target="_blank" data-lity=""><img
+                src="img/videos_img01.jpg" alt=""></a></li>
+
+        </ul>
+        <a class='more_media_link' href='#'>See More Videos</a>
+      </div>
+      <!-- gallery slider: videos -->
+      <div class='gallery_thumbnails'>
+        <h3>Photos</h3>
+        <ul>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+          <li><a href="img/videos_img01.jpg" data-lity=""><img src="img/videos_img01.jpg" alt=""></a></li>
+
+
+        </ul>
+        <a class='more_media_link' href='#'>See More Photos</a>
+      </div>
+    </section>
+    <section id='about_section'>
+        <span id='about_anchor' class='anchors'></span>
+        <h2>About</h2>
+        <div>
+            <img src='img/about_img01.jpg' alt='#' />
+            <h3>Entrepreneur</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna
+                aliqua.
+            </p>
+        </div>
+        <div>
+            <img src='img/about_img02.jpg' alt='#' />
+            <h3>Producer</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna
+                aliqua.
+            </p>
+        </div>
+        <div>
+            <img src='img/about_img03.jpg' alt='#' />
+            <h3>Actor</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna
+                aliqua.
+            </p>
+        </div>
+    </section>
+    <section id='contact_section'>
+      <span id='contact_anchor' class='anchors'></span>
+      <h2>Contact</h2>
+      <div class='contact_info'>
+        <a href='mailto:adamddow@gmail.com?Subject=Hi%20From%20Adams%20Site'>Email: adamddow@gmail.com</a>
+        <a href='tel:206-473-9211'>Phone USA: 206-473-9211</a>
+        <a href='tel:+919152730446'>Phone India: +919152730446</a>
+      </div>
+
+      <form action='form.js' method='post'>
+        <div class='form_grp'>
+          <label>Name</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class='form_grp'>
+          <label>Email</label>
+          <input type="text" name="email" required />
+        </div>
+        <div class='form_grp'>
+          <label>Services</label>
+          <select name='services' required>
+            <option value="" selected disabled>please select an option...</option>
+            <!-- <option value="" selected disabled></option> -->
+            <option value='corporate workshops'>Corporate Workshops Team Building</option>
+            <option value='improv classes'>Improv Classes</option>
+            <option value='tv film production'>TV/Film Production</option>
+            <option value='acting'>Acting</option>
+          </select>
+        </div>
+        <div class='form_grp_txtarea'>
+          <label>Message</label>
+          <textarea type='text' name='message' required></textarea>
+        </div>
+        <div class='form_grp'>
+          <button class='link_btns'>Send</button>
+        </div>
+      </form>
+
+    </section>
+    <footer>
+      <div id='footer_nav'>
+        <a href='#improv_anchor'>Improv</a>
+        <a href='#services_anchor'>Services</a>
+        <a href='#gallery_anchor'>Gallery</a>
+        <a href='#about_anchor'>About</a>
+        <a href='#contact_anchor'>Contact</a>
+      </div>
+      <div id='footer_socialmedia'>
+        <a href='#'><i class="fab fa-facebook-square"></i></a>
+        <a href='#'><i class="fab fa-instagram"></i></a>
+        <a href='#'><i class="fab fa-youtube"></i></a>
+        <a href='#'><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class='contact_info'>
+        <a href='mailto:adamddow@gmail.com?Subject=Hi%20From%20Adams%20Site'>Email: adamddow@gmail.com</a>
+        <a href='tel:206-473-9211'>Phone USA: 206-473-9211</a>
+        <a href='tel:+919152730446'>Phone India: +919152730446</a>
+        <p>copyright &copy; <span id="copyright"></span></p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- lity lightbox -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.0/lity.min.js"></script>
+
+  <!-- carousel; not lightbox -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  <script src='js/browserify/scripts.js'></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+</body>
 </html>

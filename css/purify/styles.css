@@ -336,12 +336,28 @@ header nav div {
   margin: initial auto;
 }
 
+#improv_section div ul {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 5%;
+}
+
+#improv_section div ul li {
+  width: 100%;
+  text-align: center;
+}
+
 #improv_section div>a {
   width: 100%;
 }
 
 #improv_section div h3 {
   margin: 0 auto 5%;
+}
+
+#improv_section div h4 {
+  margin: 0 auto 5%;
+  width: 70%;
 }
 
 #improv_section div img {
@@ -351,6 +367,8 @@ header nav div {
 
 #improv_section div p {
   margin: 0 auto 5%;
+  white-space: break-spaces;
+  width: 100%;
 }
 
 @media screen and (max-width:768px) {

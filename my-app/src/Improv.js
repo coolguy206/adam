@@ -1,5 +1,6 @@
 import React from "react";
 import axios from 'axios';
+import parse from 'html-react-parser';
 // import jquery from 'jquery';
 import { ImprovContent } from './ImprovContent';
 
@@ -11,15 +12,16 @@ export class Improv extends React.Component {
         this.state = {
             fbEvents: [],
             date: "",
-            class: {eventTime:[]},
+            class: { eventTime: [] },
             show: {}
         };
         this.getPost = this.getPost.bind(this);
         this.makeLi = this.makeLi.bind(this);
+        this.makeAmPm = this.makeAmPm.bind(this);
     }
 
     getPost(str, arr) {
-        console.log('getPost');
+        // console.log('getPost');
 
         var fbEvents = arr;
 
@@ -28,7 +30,7 @@ export class Improv extends React.Component {
             var name = fbEvents[i].name;
 
             if (name.indexOf(str) !== -1) {
-                console.log(`match: ${str}`);
+                // console.log(`match: ${str}`);
 
                 var objs = {
                     id: fbEvents[i].id,
@@ -47,7 +49,7 @@ export class Improv extends React.Component {
                     startTime: fbEvents[i].start_time
                 }
 
-                if (str == 'Improv Class') {
+                if (str === 'Improv Class') {
                     this.setState({
                         class: objs
                     });
@@ -62,40 +64,188 @@ export class Improv extends React.Component {
 
 
             } else {
-                console.log(`not ${str}`);
+                // console.log(`not ${str}`);
             }
         }
     }
 
-    makeLi(eventTimes) {
-        console.log('makeLi');
+    makeAmPm(hour) {
+        var ampm = ``;
+        switch (hour) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                ampm = "AM";
+                break;
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+                ampm = "PM";
+                break;
+            default:
+                ampm = "";
+        }
+
+        return ampm;
+    }
+
+    makeMonth(month) {
+        switch (month) {
+
+            case 0:
+                month = 'Jan';
+                break;
+            case 1:
+                month = 'Feb';
+
+                break;
+            case 2:
+                month = 'March';
+
+                break;
+            case 3:
+                month = 'April';
+
+                break;
+            case 4:
+                month = 'May';
+
+                break;
+            case 5:
+                month = 'June';
+
+                break;
+            case 6:
+                month = 'July';
+
+                break;
+            case 7:
+                month = 'Aug';
+
+                break;
+            case 8:
+                month = 'Sept';
+
+                break;
+            case 9:
+                month = 'Oct';
+
+                break;
+            case 10:
+                month = 'Nov';
+
+                break;
+            case 11:
+                month = 'Dec';
+
+                break;
+        }
+
+        return month;
+    }
+
+    makeLi(eventTimes, startTime, endTime) {
+        // console.log('makeLi');
         // console.log(eventTimes);
 
         var eventTime = eventTimes;
 
         var li = ``;
+        var start = ``;
+        var end = ``;
+        var startAmPm = ``;
+        var endAmPm = ``;
+        var startDate = ``;
+        var endDate = ``;
+        var startMonth = ``;
+        var startDay = ``;
+        var startYear = ``;
+        var startHour = ``;
+        var startMin = ``;
+        var endMonth = ``;
+        var endDay = ``;
+        var endYear = ``;
+        var endHour = ``;
+        var endMin = ``;
 
-        eventTime.map(function(val, i) {
-            var start = val.start_time;
-            var end = val.end_time;
+        var $this = this;
 
-            var am;
-            var pm;
+        if (eventTime !== undefined) {
+            eventTime.map(function(val, i) {
+                start = val.start_time;
+                end = val.end_time;
 
-            var startDate = new Date(start);
-            var endDate = new Date(end);
+                startDate = new Date(start);
+                endDate = new Date(end);
 
-            var startMonth = startDate.getMonth();
-            var startDay = startDate.getDate();
-            var startYear = startDate.getFullYear();
-            var startHour = startDate.getHours();
-            var startMin = startDate.getMinutes();
+                startMonth = startDate.getMonth();
+                startDay = startDate.getDate();
+                startYear = startDate.getFullYear();
+                startHour = startDate.getHours();
+                startMin = startDate.getMinutes();
 
-            var endMonth = endDate.getMonth();
-            var endDay = endDate.getDate();
-            var endYear = endDate.getFullYear();
-            var endHour = endDate.getHours();
-            var endMin = endDate.getMinutes();
+                endMonth = endDate.getMonth();
+                endDay = endDate.getDate();
+                endYear = endDate.getFullYear();
+                endHour = endDate.getHours();
+                endMin = endDate.getMinutes();
+
+                if (startMin === 0) {
+                    startMin = "00";
+                }
+                if (endMin === 0) {
+                    endMin = "00";
+                }
+
+                startAmPm = $this.makeAmPm(startHour);
+                endAmPm = $this.makeAmPm(endHour);
+
+                startMonth = $this.makeMonth(startMonth);
+                endMonth = $this.makeMonth(endMonth);
+
+                // console.log($this.makeAmPm);
+
+
+
+
+                li = li + `<li>${startMonth} ${startDay}, ${startHour}:${startMin}${startAmPm} - ${endMonth} ${endDay}, ${endHour}:${endMin}${endAmPm}</li>`;
+            })
+        } else {
+            // console.log('no eventTime');
+            // console.log(startTime, endTime);
+            
+            start = startTime;
+            end = endTime;
+
+            startDate = new Date(start);
+            endDate = new Date(end);
+
+            startMonth = startDate.getMonth();
+            startDay = startDate.getDate();
+            startYear = startDate.getFullYear();
+            startHour = startDate.getHours();
+            startMin = startDate.getMinutes();
+
+            endMonth = endDate.getMonth();
+            endDay = endDate.getDate();
+            endYear = endDate.getFullYear();
+            endHour = endDate.getHours();
+            endMin = endDate.getMinutes();
 
             if (startMin === 0) {
                 startMin = "00";
@@ -104,93 +254,16 @@ export class Improv extends React.Component {
                 endMin = "00";
             }
 
-            switch (startHour, endHour) {
-                case 12:
-                case 13:
-                case 14:
-                case 15:
-                case 16:
-                case 17:
-                case 18:
-                case 19:
-                case 20:
-                case 21:
-                    am = false;
-                    pm = true;
-                    break;
-                default:
-                    am = true;
-                    pm = false;
-            }
+            startAmPm = $this.makeAmPm(startHour);
+            endAmPm = $this.makeAmPm(endHour);
 
-            if (pm) {
-                am = "";
-                pm = "PM";
-            } else {
-                am = "AM"
-                pm = "";
-            }
+            startMonth = $this.makeMonth(startMonth);
+            endMonth = $this.makeMonth(endMonth);
 
-            switch (startMonth, endMonth) {
+            li = li + `<li>${startMonth} ${startDay}, ${startHour}:${startMin}${startAmPm} - ${endMonth} ${endDay}, ${endHour}:${endMin}${endAmPm}</li>`;
+        }
 
-                case 0:
-                    startMonth = 'Jan';
-                    endMonth = 'Jan';
-                    break;
-                case 1:
-                    startMonth = 'Feb';
-                    endMonth = 'Feb';
-                    break;
-                case 2:
-                    startMonth = 'March';
-                    endMonth = 'March';
-                    break;
-                case 3:
-                    startMonth = 'April';
-                    endMonth = 'April';
-                    break;
-                case 4:
-                    startMonth = 'May';
-                    endMonth = 'May';
-                    break;
-                case 5:
-                    startMonth = 'June';
-                    endMonth = 'June';
-                    break;
-                case 6:
-                    startMonth = 'July';
-                    endMonth = 'July';
-                    break;
-                case 7:
-                    startMonth = 'Aug';
-                    endMonth = 'Aug';
-                    break;
-                case 8:
-                    startMonth = 'Sept';
-                    endMonth = 'Sept';
-                    break;
-                case 9:
-                    startMonth = 'Oct';
-                    endMonth = 'Oct';
-                    break;
-                case 10:
-                    startMonth = 'Nov';
-                    endMonth = 'Nov';
-                    break;
-                case 11:
-                    startMonth = 'Dec';
-                    endMonth = 'Dec';
-                    break;
-            }
-
-            // return (
-            //     <li>{startMonth} {startDay} {startHour}:{startMin}{am}{pm} - {endMonth} {endDay} {endHour}:{endMin}{am}{pm}</li>
-            // );
-
-            li = li + `<li>${startMonth} ${startDay} ${startHour}:${startMin}${am}${pm} - ${endMonth} ${endDay} ${endHour}:${endMin}${am}${pm}</li>`;
-        })
-
-        console.log(li);
+        // console.log(li);
         return li;
     }
 
@@ -213,7 +286,7 @@ export class Improv extends React.Component {
 
         let url = `https://graph.facebook.com/${pageId}/events?access_token=${token}&${params}`;
 
-        console.log('from improv.js');
+        // console.log('from improv.js');
 
         // jquery.get(url, function(res) {
         //     // console.log(res);
@@ -236,8 +309,8 @@ export class Improv extends React.Component {
         axios.get(url)
             .then(function(res) {
                 // handle success
-                console.log('after ajax axios')
-                console.log(res.data.data);
+                // console.log('after ajax axios')
+                // console.log(res.data.data);
 
                 // console.log(data);
                 reactState.setState({
@@ -260,195 +333,28 @@ export class Improv extends React.Component {
 
 
     render() {
-
-
-        console.log('from improv.js render');
+        // console.log('from improv.js render');
         // console.log(this.state);
 
-        // var fbEvents = this.state.fbEvents;
-        // var id;
-        // var desc;
-        // var img;
-        // var url;
-        // var title;
-        // var li;
-        // var locationName;
-        // var locationAddress;
-        // var locationCity;
-        // var locationCountry;
-        // var locationZip;
-
-
-        // var fbClass;
-        // // fbEvents.map(function(val, i) {
-        // for (var i = 0; i < fbEvents.length; i++) {
-        //     // console.log(val);
-        //     var name = fbEvents[i].name;
-
-        //     if (name.indexOf('Improv Class') !== -1) {
-        //         // console.log('improv class');
-
-        //         // console.log(val);
-        //         id = fbEvents[i].id;
-        //         desc = fbEvents[i].description;
-        //         img = fbEvents[i].cover.source;
-        //         url = 'https://www.facebook.com/events/' + fbEvents[i].id;
-        //         title = fbEvents[i].name;
-        //         fbClass = fbEvents[i];
-
-        //         locationName = fbEvents[i].place.name;
-        //         locationAddress = fbEvents[i].place.location.street;
-        //         locationCity = fbEvents[i].place.location.city;
-        //         locationCountry = fbEvents[i].place.location.country;
-        //         locationZip = fbEvents[i].place.location.zip;
-
-        //         var eventTime = fbEvents[i].event_times;
-
-        //         li = eventTime.map(function(val, i) {
-        //             var start = val.start_time;
-        //             var end = val.end_time;
-
-        //             var am;
-        //             var pm;
-
-        //             var startDate = new Date(start);
-        //             var endDate = new Date(end);
-
-        //             var startMonth = startDate.getMonth();
-        //             var startDay = startDate.getDate();
-        //             var startYear = startDate.getFullYear();
-        //             var startHour = startDate.getHours();
-        //             var startMin = startDate.getMinutes();
-
-        //             var endMonth = endDate.getMonth();
-        //             var endDay = endDate.getDate();
-        //             var endYear = endDate.getFullYear();
-        //             var endHour = endDate.getHours();
-        //             var endMin = endDate.getMinutes();
-
-        //             if (startMin === 0) {
-        //                 startMin = "00";
-        //             }
-        //             if (endMin === 0) {
-        //                 endMin = "00";
-        //             }
-
-        //             switch (startHour, endHour) {
-        //                 case 12:
-        //                 case 13:
-        //                 case 14:
-        //                 case 15:
-        //                 case 16:
-        //                 case 17:
-        //                 case 18:
-        //                 case 19:
-        //                 case 20:
-        //                 case 21:
-        //                     am = false;
-        //                     pm = true;
-        //                     break;
-        //                 default:
-        //                     am = true;
-        //                     pm = false;
-        //             }
-
-        //             if (pm) {
-        //                 am = "";
-        //                 pm = "PM";
-        //             } else {
-        //                 am = "AM"
-        //                 pm = "";
-        //             }
-
-        //             switch (startMonth, endMonth) {
-
-        //                 case 0:
-        //                     startMonth = 'Jan';
-        //                     endMonth = 'Jan';
-        //                     break;
-        //                 case 1:
-        //                     startMonth = 'Feb';
-        //                     endMonth = 'Feb';
-        //                     break;
-        //                 case 2:
-        //                     startMonth = 'March';
-        //                     endMonth = 'March';
-        //                     break;
-        //                 case 3:
-        //                     startMonth = 'April';
-        //                     endMonth = 'April';
-        //                     break;
-        //                 case 4:
-        //                     startMonth = 'May';
-        //                     endMonth = 'May';
-        //                     break;
-        //                 case 5:
-        //                     startMonth = 'June';
-        //                     endMonth = 'June';
-        //                     break;
-        //                 case 6:
-        //                     startMonth = 'July';
-        //                     endMonth = 'July';
-        //                     break;
-        //                 case 7:
-        //                     startMonth = 'Aug';
-        //                     endMonth = 'Aug';
-        //                     break;
-        //                 case 8:
-        //                     startMonth = 'Sept';
-        //                     endMonth = 'Sept';
-        //                     break;
-        //                 case 9:
-        //                     startMonth = 'Oct';
-        //                     endMonth = 'Oct';
-        //                     break;
-        //                 case 10:
-        //                     startMonth = 'Nov';
-        //                     endMonth = 'Nov';
-        //                     break;
-        //                 case 11:
-        //                     startMonth = 'Dec';
-        //                     endMonth = 'Dec';
-        //                     break;
-        //             }
-
-        //             return (
-        //                 <li>{startMonth} {startDay} {startHour}:{startMin}{am}{pm} - {endMonth} {endDay} {endHour}:{endMin}{am}{pm}</li>
-        //             );
-        //         })
-
-        //         break;
-
-
-        //     } else {
-        //         // console.log('not improv class');
-        //     }
-        // }
-
-
-        var classLi = this.makeLi(this.state.class.eventTime);
-
+        var classLi = this.makeLi(this.state.class.eventTime, this.state.class.startTime, this.state.class.endTime);
+        var showLi = this.makeLi(this.state.show.eventTime, this.state.show.startTime, this.state.show.endTime);
 
         return (
-
             <section id="improv_section">
-
-    <span id="improv_anchor" className="anchors"></span>
-    <h2>Improv</h2>
-    <div id="improv_classes">
+                <span id="improv_anchor" className="anchors"></span>
+                <h2>Improv</h2>
+                <div id="improv_classes">
         
-          <ImprovContent url={this.state.class.url} title={this.state.class.title} img={this.state.class.img} li={classLi} locationName={this.state.class.locationName} locationAddress={this.state.class.locationAddress} locationCity={this.state.class.locationCity} locationCountry={this.state.class.locationCountry} locationZip={this.state.class.locationZip} cta1="Sign Up" cta2="See All Classes" id1="improv_classes_btn" id2="" />
+                    <ImprovContent url={this.state.class.url} title={this.state.class.title} img={this.state.class.img} li={parse(classLi)} locationName={this.state.class.locationName} locationAddress={this.state.class.locationAddress} locationCity={this.state.class.locationCity} locationCountry={this.state.class.locationCountry} locationZip={this.state.class.locationZip} cta1="Sign Up" cta2="See All Classes" id1="improv_classes_btn" id2="" />
 
-    </div>
-    <div id="improv_shows">
+                </div>
+                <div id="improv_shows">
 
-        <ImprovContent url={this.state.show.url} title={this.state.show.title} img={this.state.show.img} li="the list" locationName={this.state.show.locationName} locationAddress={this.state.show.locationAddress} locationCity={this.state.show.locationCity} locationCountry={this.state.show.locationCountry} locationZip={this.state.show.locationZip} cta1="Buy Tickets" cta2="See All Shows" id1="improv_shows_btn" id2="improv_shows_link" />
+                    <ImprovContent url={this.state.show.url} title={this.state.show.title} img={this.state.show.img} li={parse(showLi)} locationName={this.state.show.locationName} locationAddress={this.state.show.locationAddress} locationCity={this.state.show.locationCity} locationCountry={this.state.show.locationCountry} locationZip={this.state.show.locationZip} cta1="Buy Tickets" cta2="See All Shows" id1="improv_shows_btn" id2="improv_shows_link" />
 
-        
-    </div>
+                </div>
 
-</section>
-
+            </section>
         );
     }
 

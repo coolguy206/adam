@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import parse from 'html-react-parser';
+import {Api} from './Api';
 // import jquery from 'jquery';
 import { ImprovContent } from './ImprovContent';
 
@@ -269,6 +270,9 @@ export class Improv extends React.Component {
 
     componentDidMount() {
 
+        // console.log('improv didmount');
+        // console.log(Api);
+
         var todayDate = new Date();
         todayDate = todayDate.getTime();
 
@@ -278,9 +282,9 @@ export class Improv extends React.Component {
 
         // console.log(this.state);
 
-        let token = `EAADSLGopSi8BAGFjdbYwwTvP9qUhmKvR1xvzkj13nOPsRs9hEpKDZBSPov4czFb09S1dcsunzkqmuqizTlOv2pYrD2s9y1QtEW3TKxUc2zceZCM5Pco3pEOszVeQfXi6vsoZChoufFU8AEWTlg0qoD9vhAqiGu4mcxjA7DZAGgZDZD`;
+        let token = Api.Fb.key;
 
-        let pageId = `1247945788697381`;
+        let pageId = Api.Fb.id;
 
         let params = `fields=cover,id,description,start_time,end_time,event_times,name,place,ticket_uri,timezone`
 

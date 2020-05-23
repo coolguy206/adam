@@ -1,95 +1,127 @@
 import React from "react";
 import $ from 'jquery';
-// import slick from 'slick';
+import {BannerContent} from "./BannerContent";
+import {Api} from "./Api";
+import axios from "axios";
+import parse from 'html-react-parser';
 
 export class Banner extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            images: []
+        };
+        // this.getPost = this.getPost.bind(this);
+       
+    }
+
 
     componentDidMount() {
-        console.log('from banner.js');
-        // console.log($);
-        //   $('.banner_slick').slick({
-        //       dots: false,
-        //       infinite: true,
-        //       autoplay: true,
-        //       arrows: true,
-        //       prevArrow: `<button type='button' class='slick-prev pull-left'>
-        //   <svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 501.5 501.5'>
-        //     <g>
-        //       <path fill='red'
-        //         d='M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z' />
-        //     </g>
-        //   </svg>
-        // </button>`,
-        //       nextArrow: `<button type='button' class='slick-next pull-right'>
-        //   <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5">
-        //     <g>
-        //       <path fill="red"
-        //         d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z" />
-        //     </g>
-        //   </svg>
-        // </button>`
-        //   });
+        let token = Api.Fb.key;
+
+        let pageId = Api.Fb.id;
+
+        let params = `fields=id,images,link,name,picture,webp_images,album`;
+
+        let url = `https://graph.facebook.com/${Api.Fb.albumId}/photos?access_token=${token}&${params}`;
+
+        var reactState = this;
+
+        axios.get(url)
+            .then(function(res) {
+                // handle success
+                // console.log('after ajax axios')
+                // console.log(res.data.data);
+
+                // console.log('services after ajax')
+                // console.log(res.data);
+
+                reactState.setState({
+                    images: res.data.data
+                });
+
+                // console.log(reactState.state);
+            })
+            .catch(function(error) {
+                // handle error
+                console.log('error axios');
+                console.log(error);
+            });
+
+
     }
 
     render() {
 
+        var Content = function(url, h2,content, class2){
+            return {
+                url: url,
+                h2: h2,
+                content: content,
+                class2: class2
+            }
+        }
+
+        var improvShows = new Content(
+            `#improv_anchor`,
+            `Improv Shows`, 
+            `<p>
+                this is the improv shows slide content.
+            </p>`,
+            ``
+        );
+
+        var improvClasses = new Content(
+            `#improv_anchor`,
+            `Improv Classes`, 
+            `<p>
+                this is the improv classes slide content.
+            </p>`,
+            ` slide2`
+        );
+
+        var workshops = new Content(
+            `#services_anchor`,
+            `Corporate Workshop Team Building`, 
+            `<p>
+                this is the Corporate Workshop Team Building slide content.
+            </p>`,
+            ``
+        );
+
+        var imgArr = this.state.images;
+         // console.log(imgArr);
+
+         imgArr.map(function(val,i){
+            // console.log(val);
+            switch(val.name){
+                case `banner-shows`:
+                    improvShows.img = val.images[0].source;
+                    break;
+                case `banner-classes`:
+                    improvClasses.img = val.images[0].source;
+                    break;
+                case `banner-workshops`:
+                    workshops.img = val.images[0].source;
+                    break;
+            }
+         });
+
+
+
         return (
             <section>
+                <span id="top_anchor" className="anchors"></span>
+                <div className="slider banner_slick">
 
-    <span id="top_anchor" className="anchors"></span>
-    <div className="slider banner_slick">
-        <div>
-            <div className="banner_container">
-                <a href="#">
-                    <img src="/img/banner_img11.jpg" alt="#" />
-                </a>
-                <div>
-                    <h2>Improv Shows</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna
-                        aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.
-                    </p>
-                    <a href="#" className="link_btns bordered_btns">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div className="banner_container slide2">
-                <a href="#">
-                    <img src="/img/banner_img12.jpg" alt="#" />
-                </a>
-                <div>
-                    <h2>Improv classNamees</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna
-                        aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
-                    </p>
-                    <a href="#" className="link_btns bordered_btns">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div className="banner_container">
-                <a href="#">
-                    <img src="/img/banner_img03.jpg" alt="#" />
-                </a>
-                <div>
-                    <h2>Corporate Workshop<br /> Team Building</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna
-                        aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel.
-                    </p>
-                    <a href="#" className="link_btns bordered_btns">Read More</a>
-                </div>
-            </div>
+                    <BannerContent url={improvShows.url} h2={improvShows.h2} content={parse(improvShows.content)} img={improvShows.img} class2={improvShows.class2}  />
+        
+                    <BannerContent url={improvClasses.url} h2={improvClasses.h2} content={parse(improvClasses.content)} img={improvClasses.img} class2={improvClasses.class2}  />
 
-        </div>
-    </div>
-</section>
+                    <BannerContent url={workshops.url} h2={workshops.h2} content={parse(workshops.content)} img={workshops.img} class2={workshops.class2}  />
+                </div>
+            </section>
         );
     }
 

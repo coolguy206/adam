@@ -13,7 +13,9 @@ export const Api = {
     	}
     },
     Instagram: {
-      access_token: `IGQVJYMEFGajdkbXVZAWUtpR2R2cURUUF9RcUNBa3hiWEJteHktRXhJQ3FfYmxPWnlxdTl6TzNIVG5IYkJQMTkxcmEwQTMwVW0xYXRfN3lWQW1Ba25wS3kyQlZAZAX1AtSzUxQ3p5akhNSDZAGRHR6cW9pa2d2N0FURFRkLWlj`,
-      user_id: 17841405297495065
+      access_token: `IGQVJYV3ZAtVWNzSG5Lc2RLNVVPZAmR0dE9lM2tDWDVBcVAyM0hQaU9vR2s4angzUnAwMnFfM2RrUTk0M25Gbk9XRXZAxSmNfNDN6dHB1emVOXzBSNWR5c3NFb0VyS0lvT09zQmpWMVdPZAEZA3eGZAmNm1LX1c4b0kwMEUyR2ZAr`,
+      user_id: 17841405297495065,
+      client_id:`652929335439642`,
+      client_secret: `ffd90483d045918320aa766eb8fc4d2b`
     }
 }

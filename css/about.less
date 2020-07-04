@@ -1,55 +1,51 @@
 @import "global.less";
 
 #about_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: @lightblue;
+  color: white;
+  padding: 4% 0;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: @lightblue;
-    color: white;
-    padding: 4% 0;
+  h2 {
+    width: 100%;
+    margin: 0 0 2%;
+  }
 
-    h2 {
-        width: 100%;
-        margin: 0 0 2%;
+  div {
+    @media screen and (max-width: 768px) {
+      // width: 48%;
+      // padding: 0 0 2%;
+    }
+    @media screen and (max-width: 414px) {
+      width: 100%;
+      margin: 0 0 10%;
+    }
+    width: 32%;
+
+    h3,
+    img,
+    p {
+      margin: @margin;
     }
 
-    div {
-        @media screen and (max-width: 768px) {
-            // width: 48%;
-            // padding: 0 0 2%;
-        }
-        @media screen and (max-width: 414px){
-          width: 100%;
-        }
-
-        width: 32%;
-
-        h3,
-        p,
-        img {
-            margin: @margin;
-        }
-
-        h3 {
-            @media screen and (max-width: 768px){
-                font-size: 1.7em;
-            }
-            @media screen and (max-width: 414px){
-                font-size: 2.15em;
-            }
-            color: @orange;
-
-        }
-
-        p {
-            width: 80%;
-        }
-
-        img {
-            width: 100%;
-
-        }
-
+    h3 {
+      @media screen and (max-width: 768px) {
+        font-size: 1.7em;
+      }
+      @media screen and (max-width: 414px) {
+        font-size: 2.15em;
+      }
+      color: @orange;
     }
+
+    p {
+      width: 80%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }

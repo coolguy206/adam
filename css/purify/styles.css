@@ -37,12 +37,30 @@ h2 {
   font-size: 2.75em;
 }
 
+@media screen and (max-width:768px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
 h3 {
   font-size: 2.15em;
 }
 
+@media screen and (max-width:768px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
 h4 {
   font-size: 1.5em;
+}
+
+@media screen and (max-width:768px) {
+  h4 {
+    font-size: 1.2em;
+  }
 }
 
 input,p,select,textarea {
@@ -355,8 +373,20 @@ header nav div {
   margin: 0 auto 5%;
 }
 
+@media screen and (max-width:768px) {
+  #improv_section div h3 {
+    font-size: 1.5em;
+  }
+}
+
 #improv_section div h4 {
   margin: 0 auto 5%;
+}
+
+@media screen and (max-width:768px) {
+  #improv_section div h4 {
+    font-size: 1.2em;
+  }
 }
 
 #improv_section div img {
@@ -491,7 +521,6 @@ header nav div {
 
 @media screen and (max-width:768px) {
   #services_section div h3 {
-    font-size: 2em;
     line-height: 110%;
   }
 }
@@ -513,7 +542,7 @@ header nav div {
 
 @media screen and (max-width:768px) {
   #services_section div p {
-    width: 85%;
+    width: 100%;
   }
 }
 
@@ -646,10 +675,11 @@ header nav div {
 @media screen and (max-width:414px) {
   #about_section div {
     width: 100%;
+    margin: 0 0 10%;
   }
 }
 
-#about_section div h3,#about_section div p,#about_section div img {
+#about_section div h3,#about_section div img,#about_section div p {
   margin: 0 auto 5%;
 }
 

@@ -22,6 +22,7 @@ export class Gallery extends React.Component {
             <span id="gallery_anchor" className="anchors"></span>
             <h2>Gallery</h2>
             <Videos />
+            <Photos />
           </section>
         );
     }

@@ -12,10 +12,10 @@ export class Header extends React.Component {
   }
 
   toggle() {
-      console.log('toggle clicked');
+      // console.log('toggle clicked');
       var div = $('#nav_id div');
       // console.log(div);
-      if (div[0].className == "active") {
+      if (div[0].className === "active") {
           div[0].className = "";
       } else {
           div[0].className = "active";
@@ -26,7 +26,7 @@ export class Header extends React.Component {
     render() {
 
         return (
-            <header id='header'>
+        <header id='header'>
     			<nav id="nav_id" className='nav'>
         			<a href="#" id="hamburger_icon" onClick={this.toggle}>
             			<i className="fa fa-bars"></i>
@@ -43,7 +43,7 @@ export class Header extends React.Component {
             			<a href='#contact_anchor' onClick={this.toggle}>Contact</a>
         			</div>
     			</nav>
-			</header>
+			  </header>
         );
     }
 

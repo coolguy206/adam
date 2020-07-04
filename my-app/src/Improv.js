@@ -229,7 +229,7 @@ export class Improv extends React.Component {
         } else {
             // console.log('no eventTime');
             // console.log(startTime, endTime);
-            
+
             start = startTime;
             end = endTime;
 
@@ -325,7 +325,7 @@ export class Improv extends React.Component {
 
                 reactState.getPost("Showcase", reactState.state.fbEvents);
 
-                console.log(reactState.state);
+                // console.log(reactState.state);
             })
             .catch(function(error) {
                 // handle error
@@ -348,7 +348,7 @@ export class Improv extends React.Component {
                 <span id="improv_anchor" className="anchors"></span>
                 <h2>Improv</h2>
                 <div id="improv_classes">
-        
+
                     <ImprovContent url={this.state.class.url} title={this.state.class.title} img={this.state.class.img} li={parse(classLi)} locationName={this.state.class.locationName} locationAddress={this.state.class.locationAddress} locationCity={this.state.class.locationCity} locationCountry={this.state.class.locationCountry} locationZip={this.state.class.locationZip} cta1="Sign Up" cta2="See All Classes" id1="improv_classes_btn" id2="" />
 
                 </div>

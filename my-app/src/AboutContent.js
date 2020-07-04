@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export class AboutContent extends React.Component {
 
     constructor(props) {
@@ -8,14 +7,10 @@ export class AboutContent extends React.Component {
         this.state = {
 
         };
-
     }
 
-
     render() {
-
         // console.log(this.props);
-
         return (
             <React.Fragment>
                 <div>
@@ -26,7 +21,6 @@ export class AboutContent extends React.Component {
                     </p>
                 </div>
             </React.Fragment>
-
         );
     }
 

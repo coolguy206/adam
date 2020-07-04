@@ -24,7 +24,7 @@ export class Banner extends React.Component {
   componentDidMount() {
     let token = Api.Fb.key;
 
-    let pageId = Api.Fb.id;
+    // let pageId = Api.Fb.id;
 
     let params = `fields=id,images,link,name,picture,webp_images,album`;
 
@@ -160,73 +160,18 @@ export class Banner extends React.Component {
 
 
     return (
+      <section>
+        <span id ="top_anchor" className ="anchors"></span>
+        <div className ="slider banner_slick">
+          <Slider {...settings} >
+            <BannerContent url = {improvShows.url} h2 = {improvShows.h2} content = {parse(improvShows.content)} img = {improvShows.img} class2 = {improvShows.class2} />
 
-      <
-      section >
-      <
-      span id = "top_anchor"
-      className = "anchors" > < /span> <
-      div className = "slider banner_slick" >
-      <
-      Slider {
-        ...settings
-      } >
-      <
-      BannerContent url = {
-        improvShows.url
-      }
-      h2 = {
-        improvShows.h2
-      }
-      content = {
-        parse(improvShows.content)
-      }
-      img = {
-        improvShows.img
-      }
-      class2 = {
-        improvShows.class2
-      }
-      />
+            <BannerContent url = {improvClasses.url} h2 = {improvClasses.h2} content = {parse(improvClasses.content)} img = {improvClasses.img} class2 = {improvClasses.class2} />
 
-      <
-      BannerContent url = {
-        improvClasses.url
-      }
-      h2 = {
-        improvClasses.h2
-      }
-      content = {
-        parse(improvClasses.content)
-      }
-      img = {
-        improvClasses.img
-      }
-      class2 = {
-        improvClasses.class2
-      }
-      />
-
-      <
-      BannerContent url = {
-        workshops.url
-      }
-      h2 = {
-        workshops.h2
-      }
-      content = {
-        parse(workshops.content)
-      }
-      img = {
-        workshops.img
-      }
-      class2 = {
-        workshops.class2
-      }
-      /> < /
-      Slider > <
-      /div> < /
-      section >
+            <BannerContent url = {workshops.url} h2 = {workshops.h2} content = {parse(workshops.content)} img = {workshops.img} class2 = {workshops.class2}/>
+          </Slider >
+        </div>
+      </section>
     );
   }
 

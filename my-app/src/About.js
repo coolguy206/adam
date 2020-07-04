@@ -12,13 +12,12 @@ export class About extends React.Component {
             images: []
         };
         // this.getPost = this.getPost.bind(this);
-       
     }
 
     componentDidMount() {
         let token = Api.Fb.key;
 
-        let pageId = Api.Fb.id;
+        // let pageId = Api.Fb.id;
 
         let params = `fields=id,images,link,name,picture,webp_images,album`;
 
@@ -39,8 +38,8 @@ export class About extends React.Component {
                     images: res.data.data
                 });
 
-                console.log('from about.js');
-                console.log(reactState.state);
+                // console.log('from about.js');
+                // console.log(reactState.state);
             })
             .catch(function(error) {
                 // handle error
@@ -68,14 +67,14 @@ export class About extends React.Component {
             );
 
         var producer = new Content(
-            `Producer`, 
+            `Producer`,
             `<p>
                 this is the producer description.
             </p>`
             );
 
         var acting = new Content(
-            `Actor`, 
+            `Actor`,
             `<p>
                 this is the actor description.
             </p>`

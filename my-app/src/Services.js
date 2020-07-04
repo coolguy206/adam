@@ -12,13 +12,13 @@ export class Services extends React.Component {
             images: []
         };
         // this.getPost = this.getPost.bind(this);
-       
+
     }
 
     componentDidMount() {
         let token = Api.Fb.key;
 
-        let pageId = Api.Fb.id;
+        // let pageId = Api.Fb.id;
 
         let params = `fields=id,images,link,name,picture,webp_images,album`;
 
@@ -61,7 +61,7 @@ export class Services extends React.Component {
         }
 
         var workshops = new Content(
-            `Corporate Workshop<br /> Team Building`, 
+            `Corporate Workshop<br /> Team Building`,
             `<h4>How It Works</h4>
             <p>
                 this is the workshops services "how it works" description.
@@ -74,7 +74,7 @@ export class Services extends React.Component {
             );
 
         var improv = new Content(
-            `Improv classes`, 
+            `Improv classes`,
             `<h4>How It Works</h4>
             <p>
                 this is the improv services "how it works" description.
@@ -87,7 +87,7 @@ export class Services extends React.Component {
             );
 
          var tv = new Content(
-            `TV/Film Production`, 
+            `TV/Film Production`,
             `<h4>How It Works</h4>
             <p>
                 this is the tv services "how it works" description.
@@ -100,7 +100,7 @@ export class Services extends React.Component {
             );
 
          var acting = new Content(
-            `Acting`, 
+            `Acting`,
             `<p>
                 this is the acting services description.
             </p>`,
@@ -134,7 +134,7 @@ export class Services extends React.Component {
             <section id="services_section">
                 <span id="services_anchor" className="anchors"></span>
                 <h2>Services</h2>
-   
+
                 <ServicesContent img={workshops.img} h3={parse(workshops.h3)} content={parse(workshops.content)} link={workshops.link} />
 
                 <ServicesContent img={improv.img} h3={parse(improv.h3)} content={parse(improv.content)} link={improv.link} />

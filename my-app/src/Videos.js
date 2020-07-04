@@ -56,7 +56,7 @@ export class Videos extends React.Component {
   render() {
     var li = ``;
     var items = this.state.items;
-    console.log(items);
+    // console.log(items);
 
     items.forEach(function(val, i) {
       // console.log(val.snippet.thumbnails.high.url);
@@ -131,32 +131,19 @@ export class Videos extends React.Component {
       nextArrow: < NextArrow / >
     };
 
-    console.log('video done');
+    // console.log('video done');
 
-    return ( <
-      div className = "gallery_thumbnails" >
-      <
-      h3 > Videos < /h3>
+    return (
+      <div className = "gallery_thumbnails" >
+        <h3> Videos </h3>
+        <ul>
+          <Slider {...settings}>
+            {parse(li)}
+          </Slider>
+        </ul>
 
-
-      <
-      ul >
-      <
-      Slider {
-        ...settings
-      } > {
-        parse(li)
-      } <
-      /Slider> < /
-      ul >
-
-
-      <
-      a className = "more_media_link"
-      href = "https://www.youtube.com/channel/UCbGCuGMYDYC8uF4apjJr0cg?view_as=subscriber"
-      rel = "noopener noreferrer"
-      target = "_blank" > See More Videos < /a> < /
-      div >
+        <a className = "more_media_link" href = "https://www.youtube.com/channel/UCbGCuGMYDYC8uF4apjJr0cg?view_as=subscriber" rel = "noopener noreferrer" target = "_blank" > See More Videos </a>
+      </div>
     );
   }
 

@@ -20,18 +20,16 @@ export class Photos extends React.Component {
   componentDidMount() {
 
     let access_token = Api.Instagram.access_token;
-    let client_id = Api.Instagram.client_id;
-    let client_secret = Api.Instagram.client_secret;
+    // let client_id = Api.Instagram.client_id;
+    // let client_secret = Api.Instagram.client_secret;
 
     // console.log(api_key);
 
     var reactState = this;
     // console.log(reactState.setState);
 
-
-
     //refresh access_token
-    axios.get(`https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=${client_secret}&access_token=${access_token}`)
+    axios.get(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${access_token}`)
       .then(function(data){
         // console.log('success axis photos');
         // console.log(data);
@@ -47,7 +45,7 @@ export class Photos extends React.Component {
         .then(function(res) {
           // handle success
 
-          console.log('success axios photos');
+          // console.log('success axios photos');
           // console.log(res.data.data);
           reactState.setState({
             items: res.data.data
@@ -60,20 +58,19 @@ export class Photos extends React.Component {
           console.log('error axios photos');
           console.log(error);
         })
-
   }
 
   render() {
     var li = ``;
     var items = this.state.items;
     // console.log('photos items');
-    console.log(items);
+    // console.log(items);
 
     items.forEach(function(val, i) {
       // console.log(val.snippet.thumbnails.high.url);
       // console.log(val.snippet.thumbnails.standard.url);
 
-      if(val.media_type == "IMAGE"){
+      if(val.media_type === "IMAGE"){
         li = li + `
           <li>
             <a href="${val.media_url}" target="_blank" data-lity="" rel="noopener noreferrer">
@@ -81,7 +78,7 @@ export class Photos extends React.Component {
             </a>
           </li>`;
       }
-      else if(val.media_type == "VIDEO") {
+      else if(val.media_type === "VIDEO") {
         li = li + `
           <li>
             <video controls  poster="${val.thumbnail_url}">
@@ -91,12 +88,9 @@ export class Photos extends React.Component {
           </li>`;
       }
 
-
-
     });
 
-    console.log(li);
-
+    // console.log(li);
 
     function PrevArrow(props) {
       const {
@@ -156,18 +150,16 @@ export class Photos extends React.Component {
       nextArrow: < NextArrow / >
     };
 
-    console.log('photos done');
+    // console.log('photos done');
 
     return (
       <div className ="gallery_thumbnails">
         <h3>Photos</h3>
-
         <ul>
           <Slider {...settings}>
             { parse(li)}
           </Slider>
         </ul >
-
         <a className = "more_media_link" href = "https://www.instagram.com/dow206/" rel = "noopener noreferrer" target = "_blank" >See More Photos</a>
       </div>
     );

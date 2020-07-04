@@ -1,5 +1,5 @@
 import React from "react";
-import { ContactInfo } from "./ContactInfo";
+// import { ContactInfo } from "./ContactInfo";
 
 export class Footer extends React.Component {
 
@@ -9,7 +9,7 @@ export class Footer extends React.Component {
         let year = date.getFullYear();
 
         return (
-            <footer>
+        <footer>
           <div id="footer_nav">
             <a href="#improv_anchor">Improv</a>
             <a href="#services_anchor">Services</a>
@@ -26,7 +26,7 @@ export class Footer extends React.Component {
           <div className="contact_info">
             <p>copyright &copy; <span id="copyright">{year}</span></p>
           </div>
-      </footer>
+        </footer>
         );
     }
 

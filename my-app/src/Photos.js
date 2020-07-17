@@ -36,7 +36,7 @@ export class Photos extends React.Component {
       })
       .catch(function(err){
         // handle error
-        console.log('error axios photos');
+        console.log('error axios photos refresh access token failed');
         console.log(err);
       });
 
@@ -55,7 +55,7 @@ export class Photos extends React.Component {
         })
         .catch(function(error) {
           // handle error
-          console.log('error axios photos');
+          console.log('error axios photos get media failed');
           console.log(error);
         })
   }

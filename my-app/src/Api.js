@@ -13,7 +13,7 @@ export const Api = {
     	}
     },
     Instagram: {
-      access_token: `IGQVJXWDFOa25rMi1yc2FiNy0xZAU1NS1BQa0xHb0dXZAmFPUW9yTEFJWFp5QlFNQkZAJbkFJUGpvTFZAHSnFEODdlSERXYmp0VTJWWTFHWUN3VWtSdDNxMy1IVnUxbXNXOXRNUGhJUnA4elZACbmFrbHE3SHg4aFhKZAkVQeEx3`,
+      access_token: `IGQVJXQzg5NXdTR1ZAaRFlGc3BIYmRPV3BQaHRDamRFTk5SVENiMWw4TWNyMFhYUXpKMnVpeUpibmNnbVh1am03enNud0xVOHdYcWJNa1pvTTRmOGF2TlQ5RXlLTG5CRHp6WEpsaklB`,
       user_id: 17841405297495065,
       client_id:`652929335439642`,
       client_secret: `ffd90483d045918320aa766eb8fc4d2b`

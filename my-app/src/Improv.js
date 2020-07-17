@@ -186,7 +186,11 @@ export class Improv extends React.Component {
 
         var $this = this;
 
-        if (eventTime !== undefined) {
+        // if (eventTime !== undefined) {
+        //   console.log(eventTime.length);
+        // }
+
+        if (eventTime !== undefined && eventTime.length > 0) {
             eventTime.map(function(val, i) {
                 start = val.start_time;
                 end = val.end_time;
@@ -200,21 +204,32 @@ export class Improv extends React.Component {
                 startHour = startDate.getHours();
                 startMin = startDate.getMinutes();
 
+                // console.log('startMin');
+                // console.log(typeof startMin);
+
                 endMonth = endDate.getMonth();
                 endDay = endDate.getDate();
                 endYear = endDate.getFullYear();
                 endHour = endDate.getHours();
                 endMin = endDate.getMinutes();
 
+                // console.log('endMin');
+                // console.log(typeof endMin);
+
                 if (startMin === 0) {
-                    startMin = "00";
+                    startMin = `00`;
                 }
                 if (endMin === 0) {
-                    endMin = "00";
+                    endMin = `00`;
                 }
+
+                // console.log(`startMin: ${startMin} and typeof is `  + typeof startMin);
+                // console.log(`endMin: ${endMin} and typeof is `  + typeof endMin);
 
                 startAmPm = $this.makeAmPm(startHour);
                 endAmPm = $this.makeAmPm(endHour);
+
+                // console.log(`startAmPm: ${startAmPm} and typeof is ` + typeof startAmPm);
 
                 startMonth = $this.makeMonth(startMonth);
                 endMonth = $this.makeMonth(endMonth);
@@ -222,9 +237,9 @@ export class Improv extends React.Component {
                 // console.log($this.makeAmPm);
 
 
-
-
                 li = li + `<li>${startMonth} ${startDay}, ${startHour}:${startMin}${startAmPm} - ${endMonth} ${endDay}, ${endHour}:${endMin}${endAmPm}</li>`;
+
+                // li = li + `<li>${startMonth} </li>`;
             })
         } else {
             // console.log('no eventTime');
@@ -249,10 +264,10 @@ export class Improv extends React.Component {
             endMin = endDate.getMinutes();
 
             if (startMin === 0) {
-                startMin = "00";
+                startMin = `00`;
             }
             if (endMin === 0) {
-                endMin = "00";
+                endMin = `00`;
             }
 
             startAmPm = $this.makeAmPm(startHour);
@@ -262,6 +277,8 @@ export class Improv extends React.Component {
             endMonth = $this.makeMonth(endMonth);
 
             li = li + `<li>${startMonth} ${startDay}, ${startHour}:${startMin}${startAmPm} - ${endMonth} ${endDay}, ${endHour}:${endMin}${endAmPm}</li>`;
+
+            // li = li + `<li>${startMonth}</li>`;
         }
 
         // console.log(li);
@@ -329,7 +346,7 @@ export class Improv extends React.Component {
             })
             .catch(function(error) {
                 // handle error
-                console.log('error axios');
+                console.log('error axios improv');
                 console.log(error);
             })
 
@@ -338,7 +355,7 @@ export class Improv extends React.Component {
 
     render() {
         // console.log('from improv.js render');
-        // console.log(this.state);
+        // console.log(this.state.class.eventTime);
 
         var classLi = this.makeLi(this.state.class.eventTime, this.state.class.startTime, this.state.class.endTime);
         var showLi = this.makeLi(this.state.show.eventTime, this.state.show.startTime, this.state.show.endTime);

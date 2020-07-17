@@ -31,8 +31,28 @@ export class Photos extends React.Component {
     //refresh access_token
     axios.get(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${access_token}`)
       .then(function(data){
-        // console.log('success axis photos');
-        // console.log(data);
+        console.log('success axis photos access token refresh');
+        console.log(data);
+
+        //get media
+          axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,permalink,thumbnail_url,media_url&access_token=${access_token}`)
+            .then(function(res) {
+              // handle success
+
+              console.log('success axios photos get media');
+              console.log(res.data.data);
+              reactState.setState({
+                items: res.data.data
+              });
+
+              // console.log(reactState.state);
+            })
+            .catch(function(error) {
+              // handle error
+              console.log('error axios photos get media failed');
+              console.log(error);
+            })
+
       })
       .catch(function(err){
         // handle error
@@ -40,24 +60,7 @@ export class Photos extends React.Component {
         console.log(err);
       });
 
-    //get media
-      axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,permalink,thumbnail_url,media_url&access_token=${access_token}`)
-        .then(function(res) {
-          // handle success
 
-          // console.log('success axios photos');
-          // console.log(res.data.data);
-          reactState.setState({
-            items: res.data.data
-          });
-
-          // console.log(reactState.state);
-        })
-        .catch(function(error) {
-          // handle error
-          console.log('error axios photos get media failed');
-          console.log(error);
-        })
   }
 
   render() {

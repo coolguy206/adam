@@ -366,12 +366,12 @@ export class Improv extends React.Component {
                 <h2>Improv</h2>
                 <div id="improv_classes">
 
-                    <ImprovContent url={this.state.class.url} title={this.state.class.title} img={this.state.class.img} li={parse(classLi)} locationName={this.state.class.locationName} locationAddress={this.state.class.locationAddress} locationCity={this.state.class.locationCity} locationCountry={this.state.class.locationCountry} locationZip={this.state.class.locationZip} cta1="Sign Up" cta2="See All Classes" id1="improv_classes_btn" id2="" />
+                    <ImprovContent url={this.state.class.url} title={this.state.class.title} img={this.state.class.img} li={parse(classLi)} locationName={this.state.class.locationName} locationAddress={this.state.class.locationAddress} locationCity={this.state.class.locationCity} locationCountry={this.state.class.locationCountry} locationZip={this.state.class.locationZip} cta1="Sign Up" cta2="See All Classes" id1="improv_classes_btn" id2="" id="improv-classes"/>
 
                 </div>
                 <div id="improv_shows">
 
-                    <ImprovContent url={this.state.show.url} title={this.state.show.title} img={this.state.show.img} li={parse(showLi)} locationName={this.state.show.locationName} locationAddress={this.state.show.locationAddress} locationCity={this.state.show.locationCity} locationCountry={this.state.show.locationCountry} locationZip={this.state.show.locationZip} cta1="Buy Tickets" cta2="See All Shows" id1="improv_shows_btn" id2="improv_shows_link" />
+                    <ImprovContent url={this.state.show.url} title={this.state.show.title} img={this.state.show.img} li={parse(showLi)} locationName={this.state.show.locationName} locationAddress={this.state.show.locationAddress} locationCity={this.state.show.locationCity} locationCountry={this.state.show.locationCountry} locationZip={this.state.show.locationZip} cta1="Buy Tickets" cta2="See All Shows" id1="improv_shows_btn" id2="improv_shows_link" id="improv-shows"/>
 
                 </div>
 

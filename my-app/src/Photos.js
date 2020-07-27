@@ -76,7 +76,7 @@ export class Photos extends React.Component {
       if(val.media_type === "IMAGE"){
         li = li + `
           <li>
-            <a href="${val.media_url}" target="_blank" data-lity="" rel="noopener noreferrer">
+            <a href="${val.media_url}" target="_blank" data-lity="" rel="noopener noreferrer" class="instagram - ${val.caption}">
               <img src="${val.media_url}" alt="${val.caption}" />
             </a>
           </li>`;
@@ -163,7 +163,7 @@ export class Photos extends React.Component {
             { parse(li)}
           </Slider>
         </ul >
-        <a className = "more_media_link" href = "https://www.instagram.com/dow206/" rel = "noopener noreferrer" target = "_blank" >See More Photos</a>
+        <a className = "more_media_link" href = "https://www.instagram.com/dow206/" rel = "noopener noreferrer" target = "_blank" id="instagram">See More Photos</a>
       </div>
     );
   }

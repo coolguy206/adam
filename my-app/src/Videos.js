@@ -63,7 +63,7 @@ export class Videos extends React.Component {
       // console.log(val.snippet.thumbnails.standard.url);
 
       li = li + `<li>
-          <a href="https://www.youtube.com/watch?v=${val.snippet.resourceId.videoId}" target="_blank" data-lity="" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/watch?v=${val.snippet.resourceId.videoId}" target="_blank" data-lity="" rel="noopener noreferrer" id="youtube - ${val.snippet.title}">
             <img src="${val.snippet.thumbnails.high.url}" alt="${val.snippet.title}" />
           </a>
         </li>`;
@@ -142,7 +142,7 @@ export class Videos extends React.Component {
           </Slider>
         </ul>
 
-        <a className = "more_media_link" href = "https://www.youtube.com/channel/UCbGCuGMYDYC8uF4apjJr0cg?view_as=subscriber" rel = "noopener noreferrer" target = "_blank" > See More Videos </a>
+        <a className = "more_media_link" href = "https://www.youtube.com/channel/UCbGCuGMYDYC8uF4apjJr0cg?view_as=subscriber" rel = "noopener noreferrer" target = "_blank" id="youtube"> See More Videos </a>
       </div>
     );
   }

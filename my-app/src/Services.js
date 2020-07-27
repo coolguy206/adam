@@ -135,13 +135,13 @@ export class Services extends React.Component {
                 <span id="services_anchor" className="anchors"></span>
                 <h2>Services</h2>
 
-                <ServicesContent img={workshops.img} h3={parse(workshops.h3)} content={parse(workshops.content)} link={workshops.link} />
+                <ServicesContent img={workshops.img} h3={parse(workshops.h3)} content={parse(workshops.content)} link={workshops.link} class="services-workshops" />
 
-                <ServicesContent img={improv.img} h3={parse(improv.h3)} content={parse(improv.content)} link={improv.link} />
+                <ServicesContent img={improv.img} h3={parse(improv.h3)} content={parse(improv.content)} link={improv.link} class="services-improv" />
 
-                <ServicesContent img={tv.img} h3={parse(tv.h3)} content={parse(tv.content)} link={tv.link} />
+                <ServicesContent img={tv.img} h3={parse(tv.h3)} content={parse(tv.content)} link={tv.link} class="services-tv" />
 
-                <ServicesContent img={acting.img} h3={parse(acting.h3)} content={parse(acting.content)} link={acting.link} />
+                <ServicesContent img={acting.img} h3={parse(acting.h3)} content={parse(acting.content)} link={acting.link} class="services-acting" />
             </section>
         );
     }

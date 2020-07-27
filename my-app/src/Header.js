@@ -36,11 +36,11 @@ export class Header extends React.Component {
             			<a href="#" id="hamburger_close" onClick={this.toggle}>
                 			<i className="far fa-times-circle fa-lg"></i>
             			</a>
-            			<a href='#improv_anchor' onClick={this.toggle}>Improv</a>
-            			<a href='#services_anchor' onClick={this.toggle}>Services</a>
-            			<a href='#gallery_anchor' onClick={this.toggle}>Gallery</a>
-            			<a href='#about_anchor' onClick={this.toggle}>About</a>
-            			<a href='#contact_anchor' onClick={this.toggle}>Contact</a>
+            			<a href='#improv_anchor' onClick={this.toggle} id="nav-improv">Improv</a>
+            			<a href='#services_anchor' onClick={this.toggle} id="nav-services">Services</a>
+            			<a href='#gallery_anchor' onClick={this.toggle} id="nav-gallery">Gallery</a>
+            			<a href='#about_anchor' onClick={this.toggle} id="nav-about">About</a>
+            			<a href='#contact_anchor' onClick={this.toggle} id="nav-contact">Contact</a>
         			</div>
     			</nav>
 			  </header>

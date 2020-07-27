@@ -165,11 +165,11 @@ export class Banner extends React.Component {
         <span id ="top_anchor" className ="anchors"></span>
         <div className ="slider banner_slick">
           <Slider {...settings} >
-            <BannerContent url = {improvShows.url} h2 = {improvShows.h2} content = {parse(improvShows.content)} img = {improvShows.img} class2 = {improvShows.class2} />
+            <BannerContent url = {improvShows.url} h2 = {improvShows.h2} content = {parse(improvShows.content)} img = {improvShows.img} class2 = {improvShows.class2}  id="banner-slide1"/>
 
-            <BannerContent url = {improvClasses.url} h2 = {improvClasses.h2} content = {parse(improvClasses.content)} img = {improvClasses.img} class2 = {improvClasses.class2} />
+            <BannerContent url = {improvClasses.url} h2 = {improvClasses.h2} content = {parse(improvClasses.content)} img = {improvClasses.img} class2 = {improvClasses.class2}  id="banner-slide2"/>
 
-            <BannerContent url = {workshops.url} h2 = {workshops.h2} content = {parse(workshops.content)} img = {workshops.img} class2 = {workshops.class2}/>
+            <BannerContent url = {workshops.url} h2 = {workshops.h2} content = {parse(workshops.content)} img = {workshops.img} class2 = {workshops.class2} id="banner-slide3"/>
           </Slider >
         </div>
       </section>

@@ -29,7 +29,7 @@ export class Banner extends React.Component {
     let params = `fields=id,images,link,name,picture,webp_images,album`;
 
     let url = `https://graph.facebook.com/${Api.Fb.albumId}/photos?access_token=${token}&${params}`;
-    console.log(url);
+    // console.log(url);
 
     var reactState = this;
 
